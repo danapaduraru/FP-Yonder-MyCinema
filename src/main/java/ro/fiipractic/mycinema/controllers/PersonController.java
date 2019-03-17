@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.*;
 import ro.fiipractic.mycinema.entities.Person;
 import ro.fiipractic.mycinema.services.PersonService;
 
-import javax.validation.constraints.PastOrPresent;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/persons")
@@ -53,4 +53,17 @@ public class PersonController {
     public Person saveMyPerson(@RequestBody Person personForSave) {
         return personService.savePerson(personForSave);
     }
+
+    @GetMapping(value = "/getPerson/{id}")
+    public Person getPerson(@PathVariable Long id) {
+        return personService.getPerson(id);
+    }
+
+    @GetMapping(value = "/getAllPersons")
+    public List<Person> getAllPersons()
+    {
+        return personService.getAllPersons();
+    }
+
+
 }

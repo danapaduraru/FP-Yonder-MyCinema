@@ -23,6 +23,7 @@ public class Person {
     @Column(name = "email")
     private String email;
 
+    public Person(){}
 
     public Person(Long id, String fullName, String email, String phone) {
         this.id = id;
