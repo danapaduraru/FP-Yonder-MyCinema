@@ -35,8 +35,10 @@ public class PersonServiceImpl implements PersonService {
     }
 
     @Override
-    public void changeNameById(Long id, String newFullName) {
-        personRepository.findById(id).orElse(null).setFullName(newFullName);
+    public Person changeNameById(Long id, String name) {
+        Person person =  personRepository.getOne(id);
+        person.setFullName(name);
+        return personRepository.save(person);
     }
 
 
