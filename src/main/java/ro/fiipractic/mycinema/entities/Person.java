@@ -1,37 +1,65 @@
 package ro.fiipractic.mycinema.entities;
 
-public class Person {
-    private Integer id;
-    private String name;
-    private String surname;
+import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotNull;
 
-    public Person(Integer id, String name, String surname) {
+@Entity
+@Table(name = "person")
+public class Person {
+
+    @Id
+    @GeneratedValue(strategy =  GenerationType.IDENTITY)
+    private Long id;
+
+    @NotNull
+    @Column(name = "full_name")
+    private String fullName;
+
+    @Column(name = "telephone")
+    private String phone;
+
+    @Email
+    @Column(name = "email")
+    private String email;
+
+
+    public Person(Long id, String fullName, String email, String phone) {
         this.id = id;
-        this.name = name;
-        this.surname = surname;
+        this.fullName = fullName;
+        this.email = email;
+        this.phone = phone;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getFullName() {
+        return fullName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
-    public String getSurname() {
-        return surname;
+    public String getEmail() {
+        return email;
     }
 
-    public void setSurname(String surname) {
-        this.surname = surname;
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 }

@@ -41,7 +41,7 @@ public class PersonController {
 
     @PostMapping(value = "/post/person/")
     public String getPersonDetails(@RequestBody Person person) {
-        return "Hi, this is " + person.getName() + " " + person.getSurname() + " with ID " + person.getId();
+        return "Hi, this is " + person.getFullName() + " with email: " + person.getEmail() + " and phone: " + person.getPhone();
     }
 
     @GetMapping(value = "/helloservice")
