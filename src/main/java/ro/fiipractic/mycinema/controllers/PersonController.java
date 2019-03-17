@@ -1,13 +1,18 @@
 package ro.fiipractic.mycinema.controllers;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import ro.fiipractic.mycinema.entities.Person;
+import ro.fiipractic.mycinema.services.PersonService;
 
 import javax.validation.constraints.PastOrPresent;
 
 @RestController
 @RequestMapping("/api/persons")
 public class PersonController {
+
+    @Autowired
+    PersonService personService;
 
     @GetMapping(value = "/hello")
     public String sayHello() {
@@ -37,5 +42,10 @@ public class PersonController {
     @PostMapping(value = "/post/person/")
     public String getPersonDetails(@RequestBody Person person) {
         return "Hi, this is " + person.getName() + " " + person.getSurname() + " with ID " + person.getId();
+    }
+
+    @GetMapping(value = "/helloservice")
+    public String sayHelloFromService() {
+        return personService.helloFromService();
     }
 }
