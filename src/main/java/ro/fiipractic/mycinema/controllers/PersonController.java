@@ -65,5 +65,10 @@ public class PersonController {
         return personService.getAllPersons();
     }
 
+    @PostMapping(value = "/changeName")
+    public void changeFullName(@RequestParam Long id, @RequestParam String newFullName)
+    {
+        personService.changeNameById(id,newFullName);
+    }
 
 }

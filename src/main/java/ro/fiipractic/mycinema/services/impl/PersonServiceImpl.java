@@ -34,5 +34,10 @@ public class PersonServiceImpl implements PersonService {
         return personRepository.findAll();
     }
 
+    @Override
+    public void changeNameById(Long id, String newFullName) {
+        personRepository.findById(id).orElse(null).setFullName(newFullName);
+    }
+
 
 }

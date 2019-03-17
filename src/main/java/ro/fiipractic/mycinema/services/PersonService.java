@@ -10,4 +10,5 @@ public interface PersonService {
     Person savePerson(Person personToSave);
     Person getPerson(Long id);
     List<Person> getAllPersons();
+    void changeNameById(Long id, String newFullName);
 }
