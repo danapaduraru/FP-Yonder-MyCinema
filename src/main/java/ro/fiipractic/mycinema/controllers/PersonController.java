@@ -48,4 +48,9 @@ public class PersonController {
     public String sayHelloFromService() {
         return personService.helloFromService();
     }
+
+    @PostMapping(value = "/saveMyPerson")
+    public Person saveMyPerson(@RequestBody Person personForSave) {
+        return personService.savePerson(personForSave);
+    }
 }
