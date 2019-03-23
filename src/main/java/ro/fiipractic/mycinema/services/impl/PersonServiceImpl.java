@@ -44,4 +44,9 @@ public class PersonServiceImpl implements PersonService {
         person.setPhone(updatedPerson.getPhone());
         savePerson(person);
     }
+
+    @Override
+    public void deletePersonById(Long id) {
+        personRepository.deleteById(id);
+    }
 }

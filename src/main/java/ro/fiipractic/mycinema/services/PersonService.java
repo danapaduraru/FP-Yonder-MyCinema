@@ -11,4 +11,5 @@ public interface PersonService {
     List<Person> getAllPersons();
     Person updateFullNameById(Long id, String name);
     void updatePerson(Person updatedPerson);
+    void deletePersonById(Long id);
 }

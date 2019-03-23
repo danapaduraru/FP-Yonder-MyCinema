@@ -43,4 +43,9 @@ public class PersonController {
     public void updatePerson(@RequestBody Person updatedPerson) {
         personService.updatePerson(updatedPerson);
     }
+
+    @DeleteMapping(value = "/delete/{id}")
+    public void deletePerson(@PathVariable Long id) {
+        personService.deletePersonById(id);
+    }
 }
