@@ -15,11 +15,6 @@ public class PersonServiceImpl implements PersonService {
     PersonRepository personRepository;
 
     @Override
-    public String helloFromService() {
-        return "Hello from service!";
-    }
-
-    @Override
     public Person savePerson(Person personToSave) {
         return personRepository.save(personToSave);
     }
@@ -35,11 +30,18 @@ public class PersonServiceImpl implements PersonService {
     }
 
     @Override
-    public Person changeNameById(Long id, String name) {
-        Person person =  personRepository.getOne(id);
+    public Person updateFullNameById(Long id, String name) {
+        Person person = personRepository.getOne(id);
         person.setFullName(name);
         return personRepository.save(person);
     }
 
-
+    @Override
+    public void updatePerson(Person updatedPerson) {
+        Person person = personRepository.getOne(updatedPerson.getId());
+        person.setFullName(updatedPerson.getFullName());
+        person.setEmail(updatedPerson.getEmail());
+        person.setPhone(updatedPerson.getPhone());
+        savePerson(person);
+    }
 }

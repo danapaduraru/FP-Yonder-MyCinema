@@ -9,7 +9,7 @@ import javax.validation.constraints.NotNull;
 public class Person {
 
     @Id
-    @GeneratedValue(strategy =  GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotNull
@@ -23,7 +23,8 @@ public class Person {
     @Column(name = "email")
     private String email;
 
-    public Person(){}
+    public Person() {
+    }
 
     public Person(Long id, String fullName, String email, String phone) {
         this.id = id;
