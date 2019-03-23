@@ -14,11 +14,6 @@ public class PersonController {
     @Autowired
     PersonService personService;
 
-    @PostMapping(value = "/post/person/")
-    public String getPersonDetails(@RequestBody Person person) {
-        return "Hi, this is " + person.getFullName() + " with email: " + person.getEmail() + " and phone: " + person.getPhone();
-    }
-
     @PostMapping(value = "/save")
     public Person saveMyPerson(@RequestBody Person personForSave) {
         return personService.savePerson(personForSave);
