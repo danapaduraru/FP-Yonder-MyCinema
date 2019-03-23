@@ -20,7 +20,7 @@ public class PersonServiceImpl implements PersonService {
     }
 
     @Override
-    public Person getPerson(Long id) {
+    public Person getPersonById(Long id) {
         return personRepository.findById(id).orElse(null);
     }
 
@@ -37,12 +37,8 @@ public class PersonServiceImpl implements PersonService {
     }
 
     @Override
-    public void updatePerson(Person updatedPerson) {
-        Person person = personRepository.getOne(updatedPerson.getId());
-        person.setFullName(updatedPerson.getFullName());
-        person.setEmail(updatedPerson.getEmail());
-        person.setPhone(updatedPerson.getPhone());
-        savePerson(person);
+    public Person updatePerson(Person updatedPerson) {
+        return personRepository.save(updatedPerson);
     }
 
     @Override
