@@ -10,4 +10,6 @@ public interface CinemaService {
     List<Cinema> getAll();
 
     Cinema saveCinema(Cinema cinema);
+
+    List<Cinema> getCinemasByMovieRoomsCapacity(Integer capacity);
 }

@@ -28,6 +28,12 @@ public class CinemaController {
         return cinemaService.getAll();
     }
 
+    @GetMapping(value = "/filter")
+    public List<Cinema> getCinemasByMovieRoomId(@RequestParam("capacity") Integer capacity)
+    {
+        return cinemaService.getCinemasByMovieRoomsCapacity(capacity);
+    }
+
     @PostMapping
     public ResponseEntity<Cinema> saveCinema(@RequestBody CinemaDto cinemaDto) throws URISyntaxException {
         Cinema cinema = cinemaService.saveCinema(modelMapper.map(cinemaDto, Cinema.class));

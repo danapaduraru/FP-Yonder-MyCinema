@@ -23,4 +23,9 @@ public class CinemaServiceImpl implements CinemaService {
     public Cinema saveCinema(Cinema cinema) {
         return cinemaRepository.save(cinema);
     }
+
+    @Override
+    public List<Cinema> getCinemasByMovieRoomsCapacity(Integer capacity) {
+        return cinemaRepository.getCinemasByMovieRoomCapacity(capacity);
+    }
 }
