@@ -28,6 +28,11 @@ public class MovieRoomController {
         return movieRoomService.getAll();
     }
 
+    @GetMapping(value = "/filter/{cinemaId}")
+    public List<MovieRoom> getAllMovieRoomsByCinemaId(@PathVariable Long cinemaId) {
+        return movieRoomService.getAllMovieRoomsByCinemaId(cinemaId);
+    }
+
     @PostMapping
     public ResponseEntity<MovieRoom> saveMovieRoom(@RequestBody MovieRoomDto movieRoomDto) throws URISyntaxException {
         MovieRoom movieRoom = movieRoomService.saveMovieRoom(modelMapper.map(movieRoomDto, MovieRoom.class));

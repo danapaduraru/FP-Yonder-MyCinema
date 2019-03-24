@@ -23,4 +23,9 @@ public class MovieRoomServiceImpl implements MovieRoomService {
     public MovieRoom saveMovieRoom(MovieRoom movieRoom) {
         return movieRoomRepository.save(movieRoom);
     }
+
+    @Override
+    public List<MovieRoom> getAllMovieRoomsByCinemaId(Long cinemaId) {
+        return movieRoomRepository.getMovieRoomsByCinema_Id(cinemaId);
+    }
 }
