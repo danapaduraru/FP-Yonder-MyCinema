@@ -30,8 +30,7 @@ public class CinemaController {
 
     @PostMapping
     public ResponseEntity<Cinema> saveCinema(@RequestBody CinemaDto cinemaDto) throws URISyntaxException {
-        Cinema cinema = modelMapper.map(cinemaDto, Cinema.class);
-        cinemaService.saveCinema(cinema);
-        return ResponseEntity.created(new URI("/api/cinemas" + cinema.getId())).body(cinema);
+        Cinema cinema = cinemaService.saveCinema(modelMapper.map(cinemaDto, Cinema.class));
+        return ResponseEntity.created(new URI("/api/cinemas/" + cinema.getId())).body(cinema);
     }
 }
