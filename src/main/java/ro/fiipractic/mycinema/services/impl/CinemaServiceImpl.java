@@ -12,15 +12,15 @@ import java.util.List;
 public class CinemaServiceImpl implements CinemaService {
 
     @Autowired
-    CinemaRepository cinemaRepository;
+    private CinemaRepository cinemaRepository;
 
     @Override
     public List<Cinema> getAll() {
-        return null;
+        return cinemaRepository.findAll();
     }
 
     @Override
     public Cinema saveCinema(Cinema cinema) {
-        return null;
+        return cinemaRepository.save(cinema);
     }
 }
