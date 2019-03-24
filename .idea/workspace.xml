@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/controllers/CinemaController.java" line="32" mnemonic="2" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="59169032-a413-4fb6-9761-3a0acf9d8adc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/controllers/CinemaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/controllers/MovieRoomController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/dtos/CinemaDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/controllers/CinemaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/controllers/CinemaController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -53,18 +56,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/CinemaService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/impl/MovieRoomServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="368">
@@ -83,13 +74,21 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/controllers/CinemaController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="28" column="8" lean-forward="true" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+            <state relative-caret-position="225">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#581#582#0" expanded="true" />
-                <element signature="e#626#627#0" expanded="true" />
+                <element signature="e#827#828#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/dtos/CinemaDto.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
             </state>
           </provider>
         </entry>
@@ -176,6 +175,7 @@
         <option value="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/MovieRoomService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/impl/CinemaServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/impl/MovieRoomServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/dtos/CinemaDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/controllers/CinemaController.java" />
       </list>
     </option>
@@ -314,7 +314,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553417029284" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553418016734" />
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../FP-Yonder-MyCinema" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -362,12 +362,12 @@
       <workItem from="1552828255457" duration="71000" />
       <workItem from="1553337521058" duration="2041000" />
       <workItem from="1553344123889" duration="2120000" />
-      <workItem from="1553411537583" duration="4460000" />
+      <workItem from="1553411537583" duration="5488000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33368000" />
+    <option name="totallyTimeSpent" value="34396000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -629,14 +629,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/dtos/CinemaDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/controllers/CinemaController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="28" column="8" lean-forward="true" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+        <state relative-caret-position="225">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#581#582#0" expanded="true" />
-            <element signature="e#626#627#0" expanded="true" />
+            <element signature="e#827#828#0" expanded="true" />
           </folding>
         </state>
       </provider>

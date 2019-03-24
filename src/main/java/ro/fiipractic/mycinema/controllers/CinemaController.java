@@ -1,14 +1,16 @@
 package ro.fiipractic.mycinema.controllers;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import ro.fiipractic.mycinema.config.ModelMapperConfig;
+import ro.fiipractic.mycinema.dtos.CinemaDto;
 import ro.fiipractic.mycinema.entities.Cinema;
 import ro.fiipractic.mycinema.services.CinemaService;
 
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.List;
 
 @RestController
@@ -18,14 +20,18 @@ public class CinemaController {
     @Autowired
     private CinemaService cinemaService;
 
+    @Autowired
+    private ModelMapper modelMapper;
+
     @GetMapping
-    public List<Cinema> getAllCinemas(){
+    public List<Cinema> getAllCinemas() {
         return cinemaService.getAll();
     }
 
     @PostMapping
-
-    public ResponseEntity<Cinema> saveCinema(){
-        return null;
+    public ResponseEntity<Cinema> saveCinema(@RequestBody CinemaDto cinemaDto) throws URISyntaxException {
+        Cinema cinema = modelMapper.map(cinemaDto, Cinema.class);
+        cinemaService.saveCinema(cinema);
+        return ResponseEntity.created(new URI("/api/cinemas" + cinema.getId())).body(cinema);
     }
 }
