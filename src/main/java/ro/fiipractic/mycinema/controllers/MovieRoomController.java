@@ -38,4 +38,10 @@ public class MovieRoomController {
         MovieRoom movieRoom = movieRoomService.saveMovieRoom(modelMapper.map(movieRoomDto, MovieRoom.class));
         return ResponseEntity.created(new URI("api/movie-rooms/" + movieRoom.getId())).body(movieRoom);
     }
+
+    @DeleteMapping
+    public void deleteMovieRoom(Long id)
+    {
+        movieRoomService.deleteMovieRoom(id);
+    }
 }

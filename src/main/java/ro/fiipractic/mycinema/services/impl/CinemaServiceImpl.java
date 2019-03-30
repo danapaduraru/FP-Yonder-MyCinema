@@ -28,4 +28,9 @@ public class CinemaServiceImpl implements CinemaService {
     public List<Cinema> getCinemasByMovieRoomsCapacity(Integer capacity) {
         return cinemaRepository.getCinemasByMovieRoomCapacity(capacity);
     }
+
+    @Override
+    public void deleteCinema(Long id) {
+        cinemaRepository.deleteById(id);
+    }
 }

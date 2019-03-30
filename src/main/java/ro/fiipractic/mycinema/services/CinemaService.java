@@ -12,4 +12,6 @@ public interface CinemaService {
     Cinema saveCinema(Cinema cinema);
 
     List<Cinema> getCinemasByMovieRoomsCapacity(Integer capacity);
+
+    void deleteCinema(Long id);
 }

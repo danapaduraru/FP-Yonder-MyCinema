@@ -29,8 +29,7 @@ public class CinemaController {
     }
 
     @GetMapping(value = "/filter")
-    public List<Cinema> getCinemasByMovieRoomId(@RequestParam("capacity") Integer capacity)
-    {
+    public List<Cinema> getCinemasByMovieRoomId(@RequestParam("capacity") Integer capacity) {
         return cinemaService.getCinemasByMovieRoomsCapacity(capacity);
     }
 

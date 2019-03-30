@@ -28,4 +28,9 @@ public class MovieRoomServiceImpl implements MovieRoomService {
     public List<MovieRoom> getAllMovieRoomsByCinemaId(Long cinemaId) {
         return movieRoomRepository.getMovieRoomsByCinema_Id(cinemaId);
     }
+
+    @Override
+    public void deleteMovieRoom(Long id) {
+        movieRoomRepository.deleteById(id);
+    }
 }

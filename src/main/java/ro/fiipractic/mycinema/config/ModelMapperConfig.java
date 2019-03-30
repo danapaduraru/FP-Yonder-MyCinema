@@ -15,8 +15,8 @@ public class ModelMapperConfig {
 
         modelMapper.getConfiguration().setSkipNullEnabled(true);
 
-        modelMapper.typeMap(MovieRoomDto.class, MovieRoom.class).addMappings(m->{
-            m.<Long>map(MovieRoomDto::getCinema_id,(MovieRoom,v) -> MovieRoom.getCinema().setId(v));
+        modelMapper.typeMap(MovieRoomDto.class, MovieRoom.class).addMappings(m -> {
+            m.<Long>map(MovieRoomDto::getCinema_id, (MovieRoom, v) -> MovieRoom.getCinema().setId(v));
         });
 
         return modelMapper;

@@ -9,5 +9,5 @@ import java.util.List;
 @Repository
 public interface MovieRoomRepository extends JpaRepository<MovieRoom, Long> {
 
-    List<MovieRoom> getMovieRoomsByCinema_Id (Long cinemaId);
+    List<MovieRoom> getMovieRoomsByCinema_Id(Long cinemaId);
 }
