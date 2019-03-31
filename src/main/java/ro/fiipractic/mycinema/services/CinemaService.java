@@ -13,5 +13,5 @@ public interface CinemaService {
 
     List<Cinema> getCinemasByMovieRoomsCapacity(Integer capacity);
 
-    void deleteCinema(Long id);
+    void deleteCinemaById(Long id);
 }

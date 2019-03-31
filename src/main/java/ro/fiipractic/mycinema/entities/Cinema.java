@@ -52,4 +52,12 @@ public class Cinema {
     public void setMovieRooms(List<MovieRoom> movieRooms) {
         this.movieRooms = movieRooms;
     }
+
+    public void removeMovieRoom(Long id) {
+        for (MovieRoom m : movieRooms)
+            if (m.getId() == id) {
+                this.movieRooms.remove(m);
+                break;
+            }
+    }
 }

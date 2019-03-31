@@ -39,8 +39,8 @@ public class MovieRoomController {
         return ResponseEntity.created(new URI("api/movie-rooms/" + movieRoom.getId())).body(movieRoom);
     }
 
-    @DeleteMapping
-    public void deleteMovieRoom(Long id)
+    @DeleteMapping(value="/delete/{id}")
+    public void deleteMovieRoom(@PathVariable Long id)
     {
         movieRoomService.deleteMovieRoom(id);
     }

@@ -38,4 +38,10 @@ public class CinemaController {
         Cinema cinema = cinemaService.saveCinema(modelMapper.map(cinemaDto, Cinema.class));
         return ResponseEntity.created(new URI("/api/cinemas/" + cinema.getId())).body(cinema);
     }
+
+    @DeleteMapping(value="/delete/{id}")
+    public void deleteById(@PathVariable Long id)
+    {
+        cinemaService.deleteCinemaById(id);
+    }
 }
