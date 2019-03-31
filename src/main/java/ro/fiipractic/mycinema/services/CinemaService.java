@@ -1,5 +1,6 @@
 package ro.fiipractic.mycinema.services;
 
+import javassist.NotFoundException;
 import org.springframework.stereotype.Service;
 import ro.fiipractic.mycinema.entities.Cinema;
 
@@ -12,6 +13,8 @@ public interface CinemaService {
     Cinema saveCinema(Cinema cinema);
 
     List<Cinema> getCinemasByMovieRoomsCapacity(Integer capacity);
+
+    Cinema getCinemaById(Long id) throws NotFoundException;
 
     void deleteCinemaById(Long id);
 }

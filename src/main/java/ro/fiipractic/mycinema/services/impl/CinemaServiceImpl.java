@@ -1,5 +1,6 @@
 package ro.fiipractic.mycinema.services.impl;
 
+import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ro.fiipractic.mycinema.entities.Cinema;
@@ -27,6 +28,10 @@ public class CinemaServiceImpl implements CinemaService {
     @Override
     public List<Cinema> getCinemasByMovieRoomsCapacity(Integer capacity) {
         return cinemaRepository.getCinemasByMovieRoomCapacity(capacity);
+    }
+
+    public Cinema getCinemaById(Long id) throws NotFoundException {
+        return cinemaRepository.findById(id).orElseThrow(() -> new NotFoundException(String.format("Person with id=%s was not found.", id)));
     }
 
     @Override
