@@ -6,5 +6,4 @@ import ro.fiipractic.mycinema.entities.Person;
 
 @Repository
 public interface PersonRepository extends JpaRepository<Person, Long> {
-
 }

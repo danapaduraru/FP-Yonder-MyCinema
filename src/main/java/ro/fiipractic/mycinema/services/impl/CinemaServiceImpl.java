@@ -21,6 +21,11 @@ public class CinemaServiceImpl implements CinemaService {
     }
 
     @Override
+    public void deleteCinemaById(Long id) {
+        //cinemaRepository.deleteById(id);
+    }
+
+    @Override
     public Cinema saveCinema(Cinema cinema) {
         return cinemaRepository.save(cinema);
     }
@@ -32,11 +37,5 @@ public class CinemaServiceImpl implements CinemaService {
 
     public Cinema getCinemaById(Long id) throws NotFoundException {
         return cinemaRepository.findById(id).orElseThrow(() -> new NotFoundException(String.format("Person with id=%s was not found.", id)));
-    }
-
-    @Override
-    public void deleteCinemaById(Long id) {
-        //cinemaRepository.deleteById(id);
-
     }
 }

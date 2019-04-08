@@ -1,6 +1,5 @@
 package ro.fiipractic.mycinema.entities;
 
-
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import javax.persistence.*;
