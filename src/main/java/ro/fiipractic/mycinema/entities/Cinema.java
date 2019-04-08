@@ -53,6 +53,14 @@ public class Cinema {
         return movieRooms;
     }
 
+    public List<MovieInstance> getMovieInstances() {
+        return movieInstances;
+    }
+
+    public void setMovieInstances(List<MovieInstance> movieInstances) {
+        this.movieInstances = movieInstances;
+    }
+
     public void setMovieRooms(List<MovieRoom> movieRooms) {
         this.movieRooms = movieRooms;
     }
