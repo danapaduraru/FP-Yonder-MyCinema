@@ -1,8 +1,10 @@
 package ro.fiipractic.mycinema.entities;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "movie_room")
@@ -20,6 +22,10 @@ public class MovieRoom {
     @JsonBackReference
     @JoinColumn(name = "cinema_id")
     private Cinema cinema; // numele field-ului de cinema care e in mappedby in Cinema
+
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "cinema")
+    @JsonManagedReference
+    private List<MovieInstance> movieInstances;
 
     public Long getId() {
         return id;
