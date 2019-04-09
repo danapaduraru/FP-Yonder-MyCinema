@@ -1,8 +1,10 @@
 package ro.fiipractic.mycinema.entities;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "movie_instance")
@@ -11,21 +13,6 @@ public class MovieInstance {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @ManyToOne
-    @JsonBackReference
-    @JoinColumn(name = "cinema_id")
-    private Cinema cinema;
-
-    @ManyToOne
-    @JsonBackReference
-    @JoinColumn(name = "movie_id")
-    private Movie movie;
-
-    @ManyToOne
-    @JsonBackReference
-    @JoinColumn(name = "movie_room_id")
-    private MovieRoom movieRoom;
 
     @Column(name = "start_date")
     private String startDate;
@@ -42,30 +29,6 @@ public class MovieInstance {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public Cinema getCinema() {
-        return cinema;
-    }
-
-    public void setCinema(Cinema cinema) {
-        this.cinema = cinema;
-    }
-
-    public Movie getMovie() {
-        return movie;
-    }
-
-    public void setMovie(Movie movie) {
-        this.movie = movie;
-    }
-
-    public MovieRoom getMovieRoom() {
-        return movieRoom;
-    }
-
-    public void setMovieRoom(MovieRoom movieRoom) {
-        this.movieRoom = movieRoom;
     }
 
     public String getStartDate() {

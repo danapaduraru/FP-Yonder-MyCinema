@@ -21,10 +21,6 @@ public class Cinema {
     @JsonManagedReference
     private List<MovieRoom> movieRooms;
 
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "cinema")
-    @JsonManagedReference
-    private List<MovieInstance> movieInstances;
-
     public Long getId() {
         return id;
     }
@@ -51,14 +47,6 @@ public class Cinema {
 
     public List<MovieRoom> getMovieRooms() {
         return movieRooms;
-    }
-
-    public List<MovieInstance> getMovieInstances() {
-        return movieInstances;
-    }
-
-    public void setMovieInstances(List<MovieInstance> movieInstances) {
-        this.movieInstances = movieInstances;
     }
 
     public void setMovieRooms(List<MovieRoom> movieRooms) {

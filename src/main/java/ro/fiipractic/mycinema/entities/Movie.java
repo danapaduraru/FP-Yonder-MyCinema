@@ -20,10 +20,6 @@ public class Movie {
     @Column(name = "duration_minutes")
     private Integer durationMinutes;
 
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "movie")
-    @JsonManagedReference
-    private List<MovieInstance> movieInstances;
-
     public Long getId() {
         return id;
     }
@@ -54,13 +50,5 @@ public class Movie {
 
     public void setDurationMinutes(Integer durationMinutes) {
         this.durationMinutes = durationMinutes;
-    }
-
-    public List<MovieInstance> getMovieInstances() {
-        return movieInstances;
-    }
-
-    public void setMovieInstances(List<MovieInstance> movieInstances) {
-        this.movieInstances = movieInstances;
     }
 }
