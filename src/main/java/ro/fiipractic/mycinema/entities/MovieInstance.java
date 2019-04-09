@@ -23,6 +23,16 @@ public class MovieInstance {
     @Column(name = "available_seats")
     private Integer availableSeats;
 
+    @ManyToOne
+    @JsonBackReference
+    @JoinColumn(name = "movie_id")
+    private Movie movie;
+
+    @ManyToOne
+    @JsonBackReference
+    @JoinColumn(name = "movie_room_id")
+    private MovieRoom movieRoom;
+
     public Long getId() {
         return id;
     }
