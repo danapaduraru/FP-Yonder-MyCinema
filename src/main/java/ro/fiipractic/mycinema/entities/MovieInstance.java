@@ -38,6 +38,10 @@ public class MovieInstance {
     @JoinColumn(name = "movie_room_id")
     private MovieRoom movieRoom;
 
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "movieInstance")
+    @JsonManagedReference
+    private List<Reservation> reservations;
+
     public Long getId() {
         return id;
     }

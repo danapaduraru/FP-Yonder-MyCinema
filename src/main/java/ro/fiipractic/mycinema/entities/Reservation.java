@@ -15,6 +15,16 @@ public class Reservation {
     @Column(name = "number_of_tickets")
     private Integer numberOfTickets;
 
+    @ManyToOne
+    @JsonBackReference
+    @JoinColumn(name = "customer_id")
+    private Person person;
+
+    @ManyToOne
+    @JsonBackReference
+    @JoinColumn(name = "movie_instance_id")
+    private MovieInstance movieInstance;
+
     public Long getId() {
         return id;
     }

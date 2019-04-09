@@ -26,6 +26,10 @@ public class Person {
     @Column(name = "email")
     private String email;
 
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "person")
+    @JsonManagedReference
+    private List<Reservation> reservations;
+
     public Person() {
     }
 
