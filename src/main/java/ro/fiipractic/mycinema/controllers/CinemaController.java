@@ -4,7 +4,6 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import ro.fiipractic.mycinema.config.ModelMapperConfig;
 import ro.fiipractic.mycinema.dtos.CinemaDto;
 import ro.fiipractic.mycinema.entities.Cinema;
 import ro.fiipractic.mycinema.services.CinemaService;
@@ -25,7 +24,7 @@ public class CinemaController {
 
     @GetMapping
     public List<Cinema> getAllCinemas() {
-        return cinemaService.getAll();
+        return cinemaService.getAllCinemas();
     }
 
     @GetMapping(value = "/filter")

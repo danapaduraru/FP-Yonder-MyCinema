@@ -2,8 +2,6 @@ package ro.fiipractic.mycinema.dtos;
 
 public class MovieRoomDto {
 
-
-
     private Long id;
 
     private String name;

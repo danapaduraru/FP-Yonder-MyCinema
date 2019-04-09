@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface CinemaService {
 
-    List<Cinema> getAll();
+    List<Cinema> getAllCinemas();
 
     Cinema saveCinema(Cinema cinema);
 

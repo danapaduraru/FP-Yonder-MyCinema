@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface MovieRoomService {
 
-    List<MovieRoom> getAll();
+    List<MovieRoom> getAllMovieRooms();
 
     MovieRoom saveMovieRoom(MovieRoom movieRoom);
 

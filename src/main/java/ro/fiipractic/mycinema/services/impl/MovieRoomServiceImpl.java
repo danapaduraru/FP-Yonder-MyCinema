@@ -22,7 +22,7 @@ public class MovieRoomServiceImpl implements MovieRoomService {
     private CinemaRepository cinemaRepository;
 
     @Override
-    public List<MovieRoom> getAll() {
+    public List<MovieRoom> getAllMovieRooms() {
         return movieRoomRepository.findAll();
     }
 

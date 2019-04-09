@@ -25,7 +25,7 @@ public class MovieRoomController {
 
     @GetMapping
     public List<MovieRoom> getAllMovieRooms() {
-        return movieRoomService.getAll();
+        return movieRoomService.getAllMovieRooms();
     }
 
     @GetMapping(value = "/filter/{cinemaId}")
