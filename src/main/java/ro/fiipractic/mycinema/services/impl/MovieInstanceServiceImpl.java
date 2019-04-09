@@ -22,7 +22,7 @@ public class MovieInstanceServiceImpl implements MovieInstanceService {
 
     @Override
     public MovieInstance getMovieInstanceById(Long id) {
-        return movieInstanceRepository.getOne(id);
+        return movieInstanceRepository.findById(id).orElse(null);
     }
 
     @Override
