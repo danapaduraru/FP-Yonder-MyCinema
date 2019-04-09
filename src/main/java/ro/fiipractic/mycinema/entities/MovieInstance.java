@@ -25,6 +25,11 @@ public class MovieInstance {
 
     @ManyToOne
     @JsonBackReference
+    @JoinColumn(name = "cinema_id")
+    private Cinema cinema;
+
+    @ManyToOne
+    @JsonBackReference
     @JoinColumn(name = "movie_id")
     private Movie movie;
 
