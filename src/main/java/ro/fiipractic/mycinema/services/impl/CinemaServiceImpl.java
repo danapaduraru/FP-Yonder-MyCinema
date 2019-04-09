@@ -22,7 +22,7 @@ public class CinemaServiceImpl implements CinemaService {
 
     @Override
     public void deleteCinemaById(Long id) {
-        //cinemaRepository.deleteById(id);
+        cinemaRepository.deleteById(id);
     }
 
     @Override

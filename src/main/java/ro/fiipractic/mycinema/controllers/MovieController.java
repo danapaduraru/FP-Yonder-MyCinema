@@ -27,9 +27,19 @@ public class MovieController {
         return movieService.getAllMovies();
     }
 
+    @GetMapping("/{id}")
+    public Movie getMovieById(@PathVariable Long id) {
+        return movieService.getMovieById(id);
+    }
+
     @PostMapping
     public ResponseEntity<Movie> saveMovie(@RequestBody MovieDto movieDto) throws URISyntaxException {
         Movie movie = movieService.saveMovie(modelMapper.map(movieDto,Movie.class));
         return ResponseEntity.created(new URI("api/movies/" + movie.getId())).body(movie);
+    }
+
+    @DeleteMapping(value = "/delete/{id}")
+    public void deleteMovie(@PathVariable Long id) {
+        movieService.deleteMovie(id);
     }
 }
