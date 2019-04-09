@@ -58,4 +58,8 @@ public class MovieRoom {
     public void setCinema(Cinema cinema) {
         this.cinema = cinema;
     }
+
+    public List<MovieInstance> getMovieInstances() {
+        return movieInstances;
+    }
 }

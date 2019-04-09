@@ -73,4 +73,32 @@ public class MovieInstance {
     public void setAvailableSeats(Integer availableSeats) {
         this.availableSeats = availableSeats;
     }
+
+    public Cinema getCinema() {
+        return cinema;
+    }
+
+    public void setCinema(Cinema cinema) {
+        this.cinema = cinema;
+    }
+
+    public Movie getMovie() {
+        return movie;
+    }
+
+    public void setMovie(Movie movie) {
+        this.movie = movie;
+    }
+
+    public MovieRoom getMovieRoom() {
+        return movieRoom;
+    }
+
+    public void setMovieRoom(MovieRoom movieRoom) {
+        this.movieRoom = movieRoom;
+    }
+
+    public List<Reservation> getReservations() {
+        return reservations;
+    }
 }

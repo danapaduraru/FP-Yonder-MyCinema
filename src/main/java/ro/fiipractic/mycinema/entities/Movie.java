@@ -55,4 +55,9 @@ public class Movie {
     public void setDurationMinutes(Integer durationMinutes) {
         this.durationMinutes = durationMinutes;
     }
+
+    public List<MovieInstance> getMovieInstances() {
+        return movieInstances;
+    }
+
 }

@@ -40,4 +40,20 @@ public class Reservation {
     public void setNumberOfTickets(Integer numberOfTickets) {
         this.numberOfTickets = numberOfTickets;
     }
+
+    public Person getPerson() {
+        return person;
+    }
+
+    public void setPerson(Person person) {
+        this.person = person;
+    }
+
+    public MovieInstance getMovieInstance() {
+        return movieInstance;
+    }
+
+    public void setMovieInstance(MovieInstance movieInstance) {
+        this.movieInstance = movieInstance;
+    }
 }

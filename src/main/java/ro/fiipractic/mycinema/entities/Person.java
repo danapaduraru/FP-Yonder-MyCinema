@@ -71,4 +71,8 @@ public class Person {
     public void setPhone(String phone) {
         this.phone = phone;
     }
+
+    public List<Reservation> getReservations() {
+        return reservations;
+    }
 }

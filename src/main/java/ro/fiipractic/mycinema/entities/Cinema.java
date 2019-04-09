@@ -57,6 +57,10 @@ public class Cinema {
         this.movieRooms = movieRooms;
     }
 
+    public List<MovieInstance> getMovieInstances() {
+        return movieInstances;
+    }
+
     public void removeMovieRoom(Long id) {
         for (MovieRoom m : movieRooms)
             if (m.getId() == id) {
