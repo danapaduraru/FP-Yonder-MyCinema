@@ -11,6 +11,7 @@ import ro.fiipractic.mycinema.services.MovieService;
 
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -24,13 +25,21 @@ public class MovieInstanceController {
     ModelMapper modelMapper;
 
     @GetMapping
-    public List<MovieInstance> getAllMovieInstances(){
-        return movieInstanceService.getAllMovieInstaces();
+    public List<MovieInstanceDto> getAllMovieInstances(){
+        List<MovieInstanceDto> list = new ArrayList<>();
+
+        for (MovieInstance entity : movieInstanceService.getAllMovieInstaces()) {
+            MovieInstanceDto map = modelMapper.map(entity, MovieInstanceDto.class);
+            list.add(map);
+        }
+        return list;
     }
 
     @GetMapping("/{id}")
-    public MovieInstance getMovieInstanceById(@PathVariable Long id) {
-        return movieInstanceService.getMovieInstanceById(id);
+    public MovieInstanceDto getMovieInstanceById(@PathVariable Long id) {
+        MovieInstance entity = movieInstanceService.getMovieInstanceById(id);
+
+        return modelMapper.map(entity, MovieInstanceDto.class);
     }
 
     @PostMapping
@@ -41,6 +50,6 @@ public class MovieInstanceController {
 
     @DeleteMapping(value = "/delete/{id}")
     public void deleteMovieInstance(@PathVariable Long id) {
-        //movieInstanceService.deleteMovieInstance(id);
+        movieInstanceService.deleteMovieInstance(id);
     }
 }

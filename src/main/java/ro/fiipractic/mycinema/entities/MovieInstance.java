@@ -23,24 +23,9 @@ public class MovieInstance {
     @Column(name = "available_seats")
     private Integer availableSeats;
 
-    @ManyToOne
-    @JsonBackReference
-    @JoinColumn(name = "cinema_id")
-    private Cinema cinema;
-
-    @ManyToOne
-    @JsonBackReference
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "movie_id")
     private Movie movie;
-
-    @ManyToOne
-    @JsonBackReference
-    @JoinColumn(name = "movie_room_id")
-    private MovieRoom movieRoom;
-
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "movieInstance")
-    @JsonManagedReference
-    private List<Reservation> reservations;
 
     public Long getId() {
         return id;
@@ -74,14 +59,6 @@ public class MovieInstance {
         this.availableSeats = availableSeats;
     }
 
-    public Cinema getCinema() {
-        return cinema;
-    }
-
-    public void setCinema(Cinema cinema) {
-        this.cinema = cinema;
-    }
-
     public Movie getMovie() {
         return movie;
     }
@@ -90,15 +67,4 @@ public class MovieInstance {
         this.movie = movie;
     }
 
-    public MovieRoom getMovieRoom() {
-        return movieRoom;
-    }
-
-    public void setMovieRoom(MovieRoom movieRoom) {
-        this.movieRoom = movieRoom;
-    }
-
-    public List<Reservation> getReservations() {
-        return reservations;
-    }
 }
