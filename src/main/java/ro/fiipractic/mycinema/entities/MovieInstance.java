@@ -35,6 +35,10 @@ public class MovieInstance {
     @JoinColumn(name = "movie_id")
     private Movie movie;
 
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "movieInstance")
+    @JsonManagedReference
+    private List<Reservation> reservations;
+
     public Long getId() {
         return id;
     }
@@ -89,5 +93,13 @@ public class MovieInstance {
 
     public void setMovie_room(MovieRoom movie_room) {
         this.movie_room = movie_room;
+    }
+
+    public List<Reservation> getReservations() {
+        return reservations;
+    }
+
+    public void setReservations(List<Reservation> reservations) {
+        this.reservations = reservations;
     }
 }

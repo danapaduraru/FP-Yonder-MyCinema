@@ -48,7 +48,7 @@ public class MovieInstanceController {
         return ResponseEntity.created(new URI("api/movie-instances/" + movieInstance.getId())).body(movieInstance);
     }
 
-    @DeleteMapping(value = "/delete/{id}")
+    @DeleteMapping(value = "/{id}")
     public void deleteMovieInstance(@PathVariable Long id) {
         movieInstanceService.deleteMovieInstance(id);
     }

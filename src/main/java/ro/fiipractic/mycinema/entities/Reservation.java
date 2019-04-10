@@ -20,6 +20,11 @@ public class Reservation {
     @JoinColumn(name = "customer_id")
     private Person person;
 
+    @ManyToOne
+    @JsonBackReference
+    @JoinColumn(name = "movie_instance_id")
+    private MovieInstance movieInstance;
+
     public Long getId() {
         return id;
     }
@@ -44,4 +49,11 @@ public class Reservation {
         this.person = person;
     }
 
+    public MovieInstance getMovieInstance() {
+        return movieInstance;
+    }
+
+    public void setMovieInstance(MovieInstance movieInstance) {
+        this.movieInstance = movieInstance;
+    }
 }
