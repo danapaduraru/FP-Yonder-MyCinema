@@ -8,6 +8,8 @@ public interface MovieRoomService {
 
     List<MovieRoom> getAllMovieRooms();
 
+    MovieRoom getMovieRoomById(Long id);
+
     MovieRoom saveMovieRoom(MovieRoom movieRoom);
 
     List<MovieRoom> getAllMovieRoomsByCinemaId(Long cinemaId);

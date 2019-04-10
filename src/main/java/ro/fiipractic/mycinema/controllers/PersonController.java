@@ -11,6 +11,7 @@ import ro.fiipractic.mycinema.services.PersonService;
 
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -23,20 +24,28 @@ public class PersonController {
     @Autowired
     private ModelMapper modelMapper;
 
+    @GetMapping()
+    public List<PersonDto> getAllPersons() {
+        List<PersonDto> personDtos = new ArrayList<>();
+
+        for (Person entity : personService.getAllPersons()) {
+            PersonDto map = modelMapper.map(entity, PersonDto.class);
+            personDtos.add(map);
+        }
+        return personDtos;
+    }
+
+    @GetMapping(value = "/{id}")
+    public PersonDto getPerson(@PathVariable Long id) {
+        Person entity = personService.getPersonById(id);
+
+        return modelMapper.map(entity, PersonDto.class);
+    }
+
     @PostMapping
     public ResponseEntity<Person> savePerson(@RequestBody PersonDto personDto) throws URISyntaxException {
         Person person = personService.savePerson(modelMapper.map(personDto, Person.class));
         return ResponseEntity.created(new URI("/api/persons/" + person.getId())).body(person);
-    }
-
-    @GetMapping(value = "/{id}")
-    public Person getPerson(@PathVariable Long id) {
-        return personService.getPersonById(id);
-    }
-
-    @GetMapping(value = "/getAll")
-    public List<Person> getAllPersons() {
-        return personService.getAllPersons();
     }
 
     @PatchMapping(value = "/updateName")
@@ -44,7 +53,7 @@ public class PersonController {
         return personService.updateFullNameById(id, name);
     }
 
-    @PutMapping(value = "update/{id}")
+    @PutMapping(value = "/{id}")
     public Person updatePerson(@PathVariable("id") Long id, @RequestBody PersonDto personDto) throws NotFoundException {
         //should be thrown a custom BadRequestException if id and personToUpdate.getId() are not equal
         Person person = personService.getPersonById(id);
@@ -55,7 +64,7 @@ public class PersonController {
         return personService.updatePerson(person);
     }
 
-    @DeleteMapping(value = "/delete/{id}")
+    @DeleteMapping(value = "/{id}")
     public void deletePerson(@PathVariable Long id) {
         personService.deletePersonById(id);
     }
