@@ -3,5 +3,5 @@ A java application for managing multiple cinemas, created during training sessio
 
 to do:
 
-put http methods
-complete delete http methods 
+- put http methods
+- complete delete http methods 
