@@ -21,6 +21,10 @@ public class Cinema {
     @JsonManagedReference
     private List<MovieRoom> movieRooms;
 
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "cinema")
+    @JsonManagedReference
+    private List<MovieInstance> movieInstanceList;
+
     public Long getId() {
         return id;
     }
@@ -51,6 +55,14 @@ public class Cinema {
 
     public void setMovieRooms(List<MovieRoom> movieRooms) {
         this.movieRooms = movieRooms;
+    }
+
+    public List<MovieInstance> getMovieInstanceList() {
+        return movieInstanceList;
+    }
+
+    public void setMovieInstanceList(List<MovieInstance> movieInstanceList) {
+        this.movieInstanceList = movieInstanceList;
     }
 
     public void removeMovieRoom(Long id) {

@@ -23,6 +23,10 @@ public class MovieRoom {
     @JoinColumn(name = "cinema_id")
     private Cinema cinema; // numele field-ului de cinema care e in mappedby in Cinema
 
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "movie_room")
+    @JsonManagedReference
+    private List<MovieInstance> movieInstances;
+
     public Long getId() {
         return id;
     }
@@ -53,5 +57,13 @@ public class MovieRoom {
 
     public void setCinema(Cinema cinema) {
         this.cinema = cinema;
+    }
+
+    public List<MovieInstance> getMovieInstances() {
+        return movieInstances;
+    }
+
+    public void setMovieInstances(List<MovieInstance> movieInstances) {
+        this.movieInstances = movieInstances;
     }
 }

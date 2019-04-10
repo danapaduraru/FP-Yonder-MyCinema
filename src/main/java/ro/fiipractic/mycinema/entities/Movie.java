@@ -20,7 +20,7 @@ public class Movie {
     @Column(name = "duration_minutes")
     private Integer durationMinutes;
 
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "movie")
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "movie")
     @JsonManagedReference
     private List<MovieInstance> movieInstances;
 

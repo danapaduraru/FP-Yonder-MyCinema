@@ -24,6 +24,14 @@ public class MovieInstance {
     private Integer availableSeats;
 
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "cinema_id")
+    private Cinema cinema;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "movie_room_id")
+    private MovieRoom movie_room;
+
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "movie_id")
     private Movie movie;
 
@@ -67,4 +75,19 @@ public class MovieInstance {
         this.movie = movie;
     }
 
+    public Cinema getCinema() {
+        return cinema;
+    }
+
+    public void setCinema(Cinema cinema) {
+        this.cinema = cinema;
+    }
+
+    public MovieRoom getMovie_room() {
+        return movie_room;
+    }
+
+    public void setMovie_room(MovieRoom movie_room) {
+        this.movie_room = movie_room;
+    }
 }
