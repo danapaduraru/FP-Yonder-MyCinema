@@ -44,7 +44,7 @@ public class MovieController {
     @PostMapping
     public ResponseEntity<Movie> saveMovie(@RequestBody MovieDto movieDto) throws URISyntaxException {
         Movie movie = movieService.saveMovie(modelMapper.map(movieDto,Movie.class));
-        return ResponseEntity.created(new URI("api/movies/" + movie.getId())).body(movie);
+        return ResponseEntity.created(new URI("/api/movies/" + movie.getId())).body(movie);
     }
 
     @DeleteMapping(value = "/{id}")

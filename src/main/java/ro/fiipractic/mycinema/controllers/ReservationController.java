@@ -46,7 +46,7 @@ public class ReservationController {
     @PostMapping
     public ResponseEntity<Reservation> saveReservation(@RequestBody ReservationDto reservationDto) throws URISyntaxException {
         Reservation reservation = reservationService.saveReservation(modelMapper.map(reservationDto, Reservation.class));
-        return ResponseEntity.created(new URI("api/reservations/" + reservation.getId())).body(reservation);
+        return ResponseEntity.created(new URI("/api/reservations/" + reservation.getId())).body(reservation);
     }
 
     @DeleteMapping(value = "/{id}")
