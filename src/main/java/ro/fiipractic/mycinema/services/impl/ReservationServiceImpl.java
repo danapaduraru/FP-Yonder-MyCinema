@@ -24,7 +24,7 @@ public class ReservationServiceImpl implements ReservationService {
     public Reservation getReservationById(Long id) throws NotFoundException {
         return reservationRepository.findById(id).orElseThrow(() -> new NotFoundException(String.format("Reservation with id=%s was not found.", id)));
     }
-    
+
     @Override
     public Reservation saveReservation(Reservation reservation) {
         return reservationRepository.save(reservation);

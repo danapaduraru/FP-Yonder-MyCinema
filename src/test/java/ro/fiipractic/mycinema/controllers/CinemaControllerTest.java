@@ -54,7 +54,7 @@ public class CinemaControllerTest {
     public void shouldReturnResponseEntityForSave() throws URISyntaxException {
         // arrange
         Mockito.when(cinemaService.saveCinema(cinema)).thenReturn(cinema);
-        Mockito.when(modelMapper.map(cinemaDto,Cinema.class)).thenReturn(cinema);
+        Mockito.when(modelMapper.map(cinemaDto, Cinema.class)).thenReturn(cinema);
         // act
         ResponseEntity<Cinema> cinemaResponseEntity = cinemaController.saveCinema(cinemaDto);
         // assert
@@ -66,7 +66,7 @@ public class CinemaControllerTest {
 
     @After
     // deferentiate objects (set null), delete inserts from DB for example
-    public void tearDown(){
+    public void tearDown() {
         cinemaDto = null;
         cinema = null;
     }
