@@ -2,6 +2,7 @@ package ro.fiipractic.mycinema.services;
 
 import javassist.NotFoundException;
 import org.assertj.core.api.Assertions;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;
@@ -17,12 +18,12 @@ import java.util.List;
 public class CinemaServiceTest {
 
     @Mock
-    CinemaRepository cinemaRepository;
+    private CinemaRepository cinemaRepository;
 
     @InjectMocks
-    CinemaServiceImpl cinemaService;
+    private CinemaServiceImpl cinemaService;
 
-    Cinema cinema;
+    private Cinema cinema;
 
     @Before
     public void setUp() {
@@ -50,5 +51,10 @@ public class CinemaServiceTest {
         // act
         Cinema cinemaById = cinemaService.getCinemaById(2L);
         // assert
+    }
+
+    @After
+    public void tearDown() {
+        cinema = null;
     }
 }

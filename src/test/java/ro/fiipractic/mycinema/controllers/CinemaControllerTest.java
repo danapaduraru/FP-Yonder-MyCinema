@@ -27,7 +27,7 @@ public class CinemaControllerTest {
     private ModelMapper modelMapper;
 
     @InjectMocks
-    CinemaController cinemaController;
+    private CinemaController cinemaController;
 
     private CinemaDto cinemaDto = new CinemaDto();
     private Cinema cinema = new Cinema();

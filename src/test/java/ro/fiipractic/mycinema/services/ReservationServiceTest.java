@@ -2,6 +2,7 @@ package ro.fiipractic.mycinema.services;
 
 import javassist.NotFoundException;
 import org.assertj.core.api.Assertions;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;
@@ -17,12 +18,12 @@ import java.util.Optional;
 public class ReservationServiceTest {
 
     @Mock
-    ReservationRepository reservationRepository;
+    private ReservationRepository reservationRepository;
 
     @InjectMocks
-    ReservationServiceImpl reservationService;
+    private ReservationServiceImpl reservationService;
 
-    Reservation reservation;
+    private Reservation reservation;
 
     @Before
     public void setUp() {
@@ -42,5 +43,10 @@ public class ReservationServiceTest {
     public void shouldThrowNotFoundExceptionWhenReservationById() throws NotFoundException {
         Mockito.when(reservationRepository.findById(0L)).thenReturn(Optional.empty());
         Reservation reservationById = reservationService.getReservationById(0L);
+    }
+
+    @After
+    public void tearDown() {
+        reservation = null;
     }
 }

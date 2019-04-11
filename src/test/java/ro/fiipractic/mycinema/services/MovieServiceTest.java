@@ -1,6 +1,7 @@
 package ro.fiipractic.mycinema.services;
 
 import org.assertj.core.api.Assertions;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;
@@ -16,12 +17,12 @@ import java.util.Optional;
 public class MovieServiceTest {
 
     @Mock
-    MovieRepository movieRepository;
+    private MovieRepository movieRepository;
 
     @InjectMocks
-    MovieServiceImpl movieService;
+    private MovieServiceImpl movieService;
 
-    Movie movie;
+    private Movie movie;
 
     @Before
     public void setUp() {
@@ -42,5 +43,10 @@ public class MovieServiceTest {
         Mockito.when(movieRepository.findById(0L)).thenReturn(Optional.empty());
         Movie movieById = movieService.getMovieById(0L);
         Assertions.assertThat(movieById).isNull();
+    }
+
+    @After
+    public void tearDown() {
+        movie = null;
     }
 }

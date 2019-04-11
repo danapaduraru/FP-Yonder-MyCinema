@@ -1,6 +1,7 @@
 package ro.fiipractic.mycinema.services;
 
 import org.assertj.core.api.Assertions;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;
@@ -20,10 +21,10 @@ import java.util.List;
 public class MovieRoomServiceTest {
 
     @Mock
-    MovieRoomRepository movieRoomRepository;
+    private MovieRoomRepository movieRoomRepository;
 
     @InjectMocks
-    MovieRoomServiceImpl movieRoomService;
+    private MovieRoomServiceImpl movieRoomService;
 
     private List<MovieRoom> movieRooms = new ArrayList<>();
     private Cinema cinema = new Cinema();
@@ -53,5 +54,10 @@ public class MovieRoomServiceTest {
         Mockito.when(movieRoomRepository.getMovieRoomsByCinema_Id(0L)).thenReturn(Collections.emptyList());
         List<MovieRoom> movieRoomsByCinemaId = movieRoomService.getAllMovieRoomsByCinemaId(0L);
         Assertions.assertThat(movieRoomsByCinemaId).isEmpty();
+    }
+
+    @After
+    public void tearDown() {
+        movieRooms = null;
     }
 }
