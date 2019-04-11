@@ -44,15 +44,15 @@ public class ModelMapperConfig {
 
         // MovieInstance -> MovieInstanceDto
         modelMapper.typeMap(MovieInstance.class, MovieInstanceDto.class).addMappings(m -> {
-            m.<Integer>map(entity -> entity.getMovie().getId(), (MovieInstanceDto, v) -> MovieInstanceDto.setMovie_id(v));
+            m.<Long>map(entity -> entity.getMovie().getId(), (MovieInstanceDto, v) -> MovieInstanceDto.setMovie_id(v));
         });
 
         modelMapper.typeMap(MovieInstance.class, MovieInstanceDto.class).addMappings(m -> {
-            m.<Integer>map(entity -> entity.getMovie_room().getId(), (MovieInstanceDto, v) -> MovieInstanceDto.setMovie_room_id(v));
+            m.<Long>map(entity -> entity.getMovie_room().getId(), (MovieInstanceDto, v) -> MovieInstanceDto.setMovie_room_id(v));
         });
 
         modelMapper.typeMap(MovieInstance.class, MovieInstanceDto.class).addMappings(m -> {
-            m.<Integer>map(entity -> entity.getCinema().getId(), (MovieInstanceDto, v) -> MovieInstanceDto.setCinema_id(v));
+            m.<Long>map(entity -> entity.getCinema().getId(), (MovieInstanceDto, v) -> MovieInstanceDto.setCinema_id(v));
         });
 
         // ReservationDto -> Reservation
@@ -66,11 +66,11 @@ public class ModelMapperConfig {
 
         // Reservation -> ReservationDto
         modelMapper.typeMap(Reservation.class, ReservationDto.class).addMappings(m -> {
-            m.<Integer>map(entity -> entity.getPerson().getId(), (ReservationDto, v) -> ReservationDto.setCustomer_id(v));
+            m.<Long>map(entity -> entity.getPerson().getId(), (ReservationDto, v) -> ReservationDto.setCustomer_id(v));
         });
 
         modelMapper.typeMap(Reservation.class, ReservationDto.class).addMappings(m -> {
-            m.<Integer>map(entity -> entity.getMovieInstance().getId(), (ReservationDto, v) -> ReservationDto.setMovie_instance_id(v));
+            m.<Long>map(entity -> entity.getMovieInstance().getId(), (ReservationDto, v) -> ReservationDto.setMovie_instance_id(v));
         });
         return modelMapper;
     }
