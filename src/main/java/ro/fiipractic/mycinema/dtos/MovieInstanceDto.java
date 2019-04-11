@@ -10,11 +10,11 @@ public class MovieInstanceDto {
 
     private Integer availableSeats;
 
-    private Integer cinema_id;
+    private Long cinema_id;
 
-    private Integer movie_id;
+    private Long movie_id;
 
-    private Integer movie_room_id;
+    private Long movie_room_id;
 
     public Long getId() {
         return id;
@@ -48,27 +48,27 @@ public class MovieInstanceDto {
         this.availableSeats = availableSeats;
     }
 
-    public Integer getCinema_id() {
+    public Long getCinema_id() {
         return cinema_id;
     }
 
-    public void setCinema_id(Integer cinema_id) {
+    public void setCinema_id(Long cinema_id) {
         this.cinema_id = cinema_id;
     }
 
-    public Integer getMovie_id() {
+    public Long getMovie_id() {
         return movie_id;
     }
 
-    public void setMovie_id(Integer movie_id) {
+    public void setMovie_id(Long movie_id) {
         this.movie_id = movie_id;
     }
 
-    public Integer getMovie_room_id() {
+    public Long getMovie_room_id() {
         return movie_room_id;
     }
 
-    public void setMovie_room_id(Integer movie_room_id) {
+    public void setMovie_room_id(Long movie_room_id) {
         this.movie_room_id = movie_room_id;
     }
 }
