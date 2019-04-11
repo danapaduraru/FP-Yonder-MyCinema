@@ -12,7 +12,9 @@ import ro.fiipractic.mycinema.entities.Cinema;
 import ro.fiipractic.mycinema.repositories.CinemaRepository;
 import ro.fiipractic.mycinema.services.impl.CinemaServiceImpl;
 
-public class CinemaServicesTest {
+import java.util.List;
+
+public class CinemaServiceTest {
 
     @Mock
     CinemaRepository cinemaRepository;
@@ -37,7 +39,6 @@ public class CinemaServicesTest {
         Mockito.when(cinemaRepository.findById(1L)).thenReturn(java.util.Optional.ofNullable(cinema));
         // act
         Cinema cinemaById = cinemaService.getCinemaById(1L);
-
         // assert
         Assertions.assertThat(cinemaById).isNotNull();
     }

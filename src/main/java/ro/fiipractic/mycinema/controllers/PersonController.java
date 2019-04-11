@@ -36,7 +36,7 @@ public class PersonController {
     }
 
     @GetMapping(value = "/{id}")
-    public PersonDto getPerson(@PathVariable Long id) {
+    public PersonDto getPerson(@PathVariable Long id) throws NotFoundException {
         Person entity = personService.getPersonById(id);
 
         return modelMapper.map(entity, PersonDto.class);

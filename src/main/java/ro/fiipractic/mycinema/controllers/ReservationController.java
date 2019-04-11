@@ -1,5 +1,6 @@
 package ro.fiipractic.mycinema.controllers;
 
+import javassist.NotFoundException;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -36,7 +37,7 @@ public class ReservationController {
     }
 
     @GetMapping("/{id}")
-    public ReservationDto getReservation(@PathVariable Long id) {
+    public ReservationDto getReservation(@PathVariable Long id) throws NotFoundException {
         Reservation entity = reservationService.getReservationById(id);
 
         return modelMapper.map(entity, ReservationDto.class);

@@ -5,13 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59169032-a413-4fb6-9761-3a0acf9d8adc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/controllers/CinemaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/controllers/CinemaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/controllers/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/controllers/MovieController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/controllers/MovieRoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/controllers/MovieRoomController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ro/fiipractic/mycinema/services/MovieInstanceServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ro/fiipractic/mycinema/services/MovieRoomServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ro/fiipractic/mycinema/services/MovieServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ro/fiipractic/mycinema/services/PersonServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ro/fiipractic/mycinema/services/ReservationServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/controllers/PersonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/controllers/PersonController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/MovieRoomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/MovieRoomService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/impl/CinemaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/impl/CinemaServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/impl/MovieRoomServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/impl/MovieRoomServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/PersonService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/ReservationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/impl/MovieInstanceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/impl/MovieInstanceServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/impl/PersonServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/impl/PersonServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/impl/ReservationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/impl/ReservationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ro/fiipractic/mycinema/services/CinemaServicesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ro/fiipractic/mycinema/services/CinemaServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/fiipractic/mycinema/controllers/PersonController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/fiipractic/mycinema/controllers/PersonController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/fiipractic/mycinema/services/PersonService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/fiipractic/mycinema/services/PersonService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/fiipractic/mycinema/services/impl/PersonServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/fiipractic/mycinema/services/impl/PersonServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ro/fiipractic/mycinema/services/CinemaServicesTest.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -41,12 +51,12 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/controllers/MovieInstanceController.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ro/fiipractic/mycinema/services/PersonServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="28" column="8" lean-forward="true" selection-start-line="28" selection-start-column="8" selection-end-line="34" selection-end-column="20" />
+            <state relative-caret-position="234">
+              <caret line="39" column="17" lean-forward="true" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -55,10 +65,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/controllers/MovieController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/repositories/ReservationRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2">
-              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+            <state relative-caret-position="112">
+              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,66 +77,54 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/controllers/CinemaController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/impl/ReservationServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="498">
-              <caret line="63" column="5" lean-forward="true" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
+            <state relative-caret-position="225">
+              <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2170#2171#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/controllers/MovieRoomController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1471#1472#0" expanded="true" />
-                <element signature="e#1523#1524#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/MovieRoomService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/impl/MovieRoomServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#920#921#0" expanded="true" />
-                <element signature="e#972#973#0" expanded="true" />
+                <element signature="e#1054#1055#0" expanded="true" />
+                <element signature="e#1166#1167#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/controllers/PersonController.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ro/fiipractic/mycinema/services/ReservationServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="482">
-              <caret line="63" column="50" lean-forward="true" selection-start-line="63" selection-start-column="50" selection-end-line="63" selection-end-column="50" />
+            <state relative-caret-position="442">
+              <caret line="36" column="1" lean-forward="true" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/impl/PersonServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="224">
+              <caret line="24" column="141" lean-forward="true" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="141" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#913#914#0" expanded="true" />
+                <element signature="e#962#963#0" expanded="true" />
+                <element signature="e#1247#1248#0" expanded="true" />
+                <element signature="e#1306#1307#0" expanded="true" />
+                <element signature="e#1365#1366#0" expanded="true" />
+                <element signature="e#1412#1413#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ro/fiipractic/mycinema/services/CinemaServiceTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="298">
+              <caret line="45" column="9" lean-forward="true" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="93" />
             </state>
           </provider>
         </entry>
@@ -149,7 +147,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/config/SwaggerConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/impl/PersonServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/PersonService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/dtos/CinemaDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/repositories/CinemaRepository.java" />
@@ -158,7 +155,6 @@
         <option value="$PROJECT_DIR$/src/test/java/ro/fiipractic/mycinema/controllers/CinemaControllerTes.java" />
         <option value="$PROJECT_DIR$/src/test/java/ro/fiipractic/mycinema/controllers/CinemaControllerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/CinemaService.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ro/fiipractic/mycinema/services/CinemaServicesTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/repositories/PersonRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/repositories/MovieRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/repositories/MovieInstanceRepository.java" />
@@ -170,14 +166,12 @@
         <option value="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/MovieInstanceService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/dtos/MovieInstanceDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/dtos/ReservationDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/impl/MovieInstanceServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/impl/MovieServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/entities/Movie.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/entities/Person.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/entities/Cinema.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/entities/MovieRoom.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/ReservationService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/impl/ReservationServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/controllers/MovieInstanceController.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/controllers/ReservationController.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/entities/Reservation.java" />
@@ -189,7 +183,17 @@
         <option value="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/MovieRoomService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/impl/MovieRoomServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/controllers/MovieRoomController.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ro/fiipractic/mycinema/services/CinemaServicesTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/impl/MovieInstanceServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ro/fiipractic/mycinema/services/CinemaServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ro/fiipractic/mycinema/services/MovieInstanceServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ro/fiipractic/mycinema/services/MovieServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ro/fiipractic/mycinema/services/MovieRoomServiceTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/controllers/PersonController.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ro/fiipractic/mycinema/services/PersonServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/impl/PersonServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/impl/ReservationServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ro/fiipractic/mycinema/services/ReservationServiceTest.java" />
       </list>
     </option>
   </component>
@@ -217,7 +221,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -365,7 +369,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -375,7 +379,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554927206449" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555001962421" />
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../FP-Yonder-MyCinema" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -397,24 +401,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.MycinemaApplication">
-    <configuration name="CinemaControllerTest.shouldReturnResponseEntityForSave" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="FPYonder" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ro.fiipractic.mycinema.controllers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ro.fiipractic.mycinema.controllers" />
-      <option name="MAIN_CLASS_NAME" value="ro.fiipractic.mycinema.controllers.CinemaControllerTest" />
-      <option name="METHOD_NAME" value="shouldReturnResponseEntityForSave" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CinemaServicesTest.shouldReturnCinemaById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ReservationServiceTest.shouldThrowNotFoundExceptionWhenReservationById">
+    <configuration name="MovieRoomServiceTest.shouldReturnNullMovieRoomObjectWhenMovieRoomByCinemaId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FPYonder" />
       <extension name="coverage">
         <pattern>
@@ -423,14 +411,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ro.fiipractic.mycinema.services" />
-      <option name="MAIN_CLASS_NAME" value="ro.fiipractic.mycinema.services.CinemaServicesTest" />
-      <option name="METHOD_NAME" value="shouldReturnCinemaById" />
+      <option name="MAIN_CLASS_NAME" value="ro.fiipractic.mycinema.services.MovieRoomServiceTest" />
+      <option name="METHOD_NAME" value="shouldReturnNullMovieRoomObjectWhenMovieRoomByCinemaId" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CinemaServicesTest.shouldThrowNotFoundExceptionWhenCinemaById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PersonServiceTest.shouldReturnPersonById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FPYonder" />
       <extension name="coverage">
         <pattern>
@@ -439,8 +427,56 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ro.fiipractic.mycinema.services" />
-      <option name="MAIN_CLASS_NAME" value="ro.fiipractic.mycinema.services.CinemaServicesTest" />
-      <option name="METHOD_NAME" value="shouldThrowNotFoundExceptionWhenCinemaById" />
+      <option name="MAIN_CLASS_NAME" value="ro.fiipractic.mycinema.services.PersonServiceTest" />
+      <option name="METHOD_NAME" value="shouldReturnPersonById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PersonServiceTest.shouldThrowNotFoundExceptionWhenPersonById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FPYonder" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ro.fiipractic.mycinema.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ro.fiipractic.mycinema.services" />
+      <option name="MAIN_CLASS_NAME" value="ro.fiipractic.mycinema.services.PersonServiceTest" />
+      <option name="METHOD_NAME" value="shouldThrowNotFoundExceptionWhenPersonById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReservationServiceTest.shouldReturnReservationById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FPYonder" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ro.fiipractic.mycinema.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ro.fiipractic.mycinema.services" />
+      <option name="MAIN_CLASS_NAME" value="ro.fiipractic.mycinema.services.ReservationServiceTest" />
+      <option name="METHOD_NAME" value="shouldReturnReservationById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReservationServiceTest.shouldThrowNotFoundExceptionWhenReservationById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FPYonder" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ro.fiipractic.mycinema.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ro.fiipractic.mycinema.services" />
+      <option name="MAIN_CLASS_NAME" value="ro.fiipractic.mycinema.services.ReservationServiceTest" />
+      <option name="METHOD_NAME" value="shouldThrowNotFoundExceptionWhenReservationById" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -455,9 +491,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CinemaServicesTest.shouldThrowNotFoundExceptionWhenCinemaById" />
-        <item itemvalue="JUnit.CinemaServicesTest.shouldReturnCinemaById" />
-        <item itemvalue="JUnit.CinemaControllerTest.shouldReturnResponseEntityForSave" />
+        <item itemvalue="JUnit.ReservationServiceTest.shouldThrowNotFoundExceptionWhenReservationById" />
+        <item itemvalue="JUnit.ReservationServiceTest.shouldReturnReservationById" />
+        <item itemvalue="JUnit.PersonServiceTest.shouldThrowNotFoundExceptionWhenPersonById" />
+        <item itemvalue="JUnit.PersonServiceTest.shouldReturnPersonById" />
+        <item itemvalue="JUnit.MovieRoomServiceTest.shouldReturnNullMovieRoomObjectWhenMovieRoomByCinemaId" />
       </list>
     </recent_temporary>
   </component>
@@ -486,44 +524,45 @@
       <workItem from="1554749891352" duration="3219000" />
       <workItem from="1554825127612" duration="13736000" />
       <workItem from="1554880154495" duration="953000" />
-      <workItem from="1554921107497" duration="5973000" />
+      <workItem from="1554921107497" duration="6649000" />
+      <workItem from="1554995864590" duration="5385000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CinemaControllerTest_shouldReturnResponseEntityForSave - 2019.03.31 at 10h 56m 27s.xml">
-      <configuration name="CinemaControllerTest.shouldReturnResponseEntityForSave" configurationId="JUnit" />
+    <history-entry file="MovieRoomServiceTest_shouldReturnMovieRoomByCinemaId - 2019.04.11 at 19h 40m 32s.xml">
+      <configuration name="MovieRoomServiceTest.shouldReturnMovieRoomByCinemaId" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CinemaControllerTest_shouldReturnResponseEntityForSave - 2019.03.31 at 10h 58m 40s.xml">
-      <configuration name="CinemaControllerTest.shouldReturnResponseEntityForSave" configurationId="JUnit" />
+    <history-entry file="MovieRoomServiceTest_shouldReturnNullMovieRoomObjectWhenMovieRoomByCinemaId - 2019.04.11 at 19h 42m 36s.xml">
+      <configuration name="MovieRoomServiceTest.shouldReturnNullMovieRoomObjectWhenMovieRoomByCinemaId" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CinemaControllerTest_shouldReturnResponseEntityForSave - 2019.03.31 at 11h 00m 32s.xml">
-      <configuration name="CinemaControllerTest.shouldReturnResponseEntityForSave" configurationId="JUnit" />
+    <history-entry file="MovieRoomServiceTest_shouldReturnNullMovieRoomObjectWhenMovieRoomByCinemaId - 2019.04.11 at 19h 42m 54s.xml">
+      <configuration name="MovieRoomServiceTest.shouldReturnNullMovieRoomObjectWhenMovieRoomByCinemaId" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CinemaControllerTest_shouldReturnResponseEntityForSave - 2019.03.31 at 11h 03m 40s.xml">
-      <configuration name="CinemaControllerTest.shouldReturnResponseEntityForSave" configurationId="JUnit" />
+    <history-entry file="PersonServiceTest_shouldReturnPersonById - 2019.04.11 at 19h 49m 57s.xml">
+      <configuration name="PersonServiceTest.shouldReturnPersonById" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CinemaControllerTest_shouldReturnResponseEntityForSave - 2019.03.31 at 11h 03m 50s.xml">
-      <configuration name="CinemaControllerTest.shouldReturnResponseEntityForSave" configurationId="JUnit" />
+    <history-entry file="PersonServiceTest_shouldReturnPersonById - 2019.04.11 at 19h 50m 16s.xml">
+      <configuration name="PersonServiceTest.shouldReturnPersonById" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CinemaControllerTest_shouldReturnResponseEntityForSave - 2019.03.31 at 11h 11m 33s.xml">
-      <configuration name="CinemaControllerTest.shouldReturnResponseEntityForSave" configurationId="JUnit" />
+    <history-entry file="PersonServiceTest_shouldReturnPersonById - 2019.04.11 at 19h 50m 47s.xml">
+      <configuration name="PersonServiceTest.shouldReturnPersonById" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CinemaControllerTest_shouldReturnResponseEntityForSave - 2019.03.31 at 11h 24m 10s.xml">
-      <configuration name="CinemaControllerTest.shouldReturnResponseEntityForSave" configurationId="JUnit" />
+    <history-entry file="PersonServiceTest_shouldReturnPersonById - 2019.04.11 at 19h 51m 18s.xml">
+      <configuration name="PersonServiceTest.shouldReturnPersonById" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CinemaServicesTest_shouldReturnCinemaById - 2019.03.31 at 11h 37m 48s.xml">
-      <configuration name="CinemaServicesTest.shouldReturnCinemaById" configurationId="JUnit" />
+    <history-entry file="PersonServiceTest_shouldReturnPersonById - 2019.04.11 at 19h 52m 03s.xml">
+      <configuration name="PersonServiceTest.shouldReturnPersonById" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CinemaServicesTest_shouldThrowNotFoundExceptionWhenCinemaById - 2019.03.31 at 11h 40m 49s.xml">
-      <configuration name="CinemaServicesTest.shouldThrowNotFoundExceptionWhenCinemaById" configurationId="JUnit" />
+    <history-entry file="PersonServiceTest_shouldReturnPersonById - 2019.04.11 at 19h 52m 13s.xml">
+      <configuration name="PersonServiceTest.shouldReturnPersonById" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CinemaServicesTest_shouldThrowNotFoundExceptionWhenCinemaById - 2019.04.08 at 22h 27m 03s.xml">
-      <configuration name="CinemaServicesTest.shouldThrowNotFoundExceptionWhenCinemaById" configurationId="JUnit" />
+    <history-entry file="PersonServiceTest_shouldThrowNotFoundExceptionWhenPersonById - 2019.04.11 at 19h 53m 35s.xml">
+      <configuration name="PersonServiceTest.shouldThrowNotFoundExceptionWhenPersonById" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75325000" />
+    <option name="totallyTimeSpent" value="81386000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -535,7 +574,7 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Web" order="4" side_tool="true" />
       <window_info id="Designer" order="5" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.2181208" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.22147651" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.3286119" />
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
@@ -546,7 +585,7 @@
       <window_info anchor="bottom" id="Spring" order="6" weight="0.3286119" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" />
-      <window_info anchor="bottom" id="Run" order="9" sideWeight="0.4986577" weight="0.059490085" />
+      <window_info anchor="bottom" id="Run" order="9" sideWeight="0.4986577" visible="true" weight="0.23796034" />
       <window_info anchor="bottom" id="Debug" order="10" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
@@ -604,211 +643,7 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/controllers/ReservationController.java</url>
-          <line>46</line>
-          <properties />
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/MovieInstanceService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/impl/MovieServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#616#617#0" expanded="true" />
-            <element signature="e#680#681#0" expanded="true" />
-            <element signature="e#826#827#0" expanded="true" />
-            <element signature="e#872#873#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.5.RELEASE/spring-webmvc-5.1.5.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="52" column="18" lean-forward="true" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.5.RELEASE/spring-web-5.1.5.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/impl/MovieInstanceServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/dtos/PersonDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/CinemaService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/repositories/CinemaRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/dtos/MovieRoomDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/dtos/CinemaDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/dtos/MovieDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/PersonService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/MovieService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/ReservationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/impl/PersonServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="38" column="13" lean-forward="true" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/impl/ReservationServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#371#372#0" expanded="true" />
-            <element signature="e#398#399#0" expanded="true" />
-            <element signature="e#466#467#0" expanded="true" />
-            <element signature="e#493#494#0" expanded="true" />
-            <element signature="e#574#575#0" expanded="true" />
-            <element signature="e#601#602#0" expanded="true" />
-            <element signature="e#969#970#0" expanded="true" />
-            <element signature="e#1015#1016#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/repositories/ReservationRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/dtos/MovieInstanceDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/entities/MovieRoom.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="61" column="50" selection-start-line="61" selection-start-column="50" selection-end-line="61" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/entities/Cinema.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="23" column="4" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="25" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#setMovieInstanceList#0;class#Cinema#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/entities/Person.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
@@ -964,16 +799,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/entities/MovieInstance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/config/SwaggerConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -984,45 +809,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/impl/CinemaServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1176#1177#0" expanded="true" />
-            <element signature="e#1223#1224#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/controllers/ReservationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        <state relative-caret-position="290">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/controllers/CinemaController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="63" column="5" lean-forward="true" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2170#2171#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/controllers/MovieInstanceController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="28" column="8" lean-forward="true" selection-start-line="28" selection-start-column="8" selection-end-line="34" selection-end-column="20" />
+        <state relative-caret-position="50">
+          <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/dtos/MovieInstanceDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/entities/MovieInstance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-256">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/entities/Cinema.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="590">
+          <caret line="73" column="5" lean-forward="true" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#setMovieInstanceList#0;class#Cinema#0" />
           </folding>
         </state>
       </provider>
@@ -1037,44 +867,227 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/MovieRoomService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/CinemaService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/impl/MovieServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/repositories/MovieInstanceRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ro/fiipractic/mycinema/controllers/CinemaControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="487">
+          <caret line="71" column="5" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/MovieRoomService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/MovieInstanceService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/impl/MovieInstanceServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/repositories/MovieRoomRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/impl/MovieRoomServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+        <state relative-caret-position="306">
+          <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#920#921#0" expanded="true" />
-            <element signature="e#972#973#0" expanded="true" />
+            <element signature="e#988#989#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/controllers/CinemaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2170#2171#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/controllers/MovieRoomController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+        <state relative-caret-position="138">
+          <caret line="49" column="24" lean-forward="true" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1471#1472#0" expanded="true" />
-            <element signature="e#1523#1524#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ro/fiipractic/mycinema/services/MovieInstanceServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="41" column="71" selection-start-line="41" selection-start-column="71" selection-end-line="41" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/impl/CinemaServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="33" column="141" lean-forward="true" selection-start-line="32" selection-start-column="40" selection-end-line="33" selection-end-column="141" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/PersonService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ro/fiipractic/mycinema/services/MovieServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="40" column="56" selection-start-line="40" selection-start-column="56" selection-end-line="40" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ro/fiipractic/mycinema/services/MovieRoomServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/controllers/PersonController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="63" column="50" lean-forward="true" selection-start-line="63" selection-start-column="50" selection-end-line="63" selection-end-column="50" />
+        <state relative-caret-position="142">
+          <caret line="39" column="46" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ro/fiipractic/mycinema/services/CinemaServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="45" column="9" lean-forward="true" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ro/fiipractic/mycinema/services/PersonServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="39" column="17" lean-forward="true" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/repositories/ReservationRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/impl/PersonServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="24" column="141" lean-forward="true" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="141" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#913#914#0" expanded="true" />
+            <element signature="e#962#963#0" expanded="true" />
+            <element signature="e#1247#1248#0" expanded="true" />
+            <element signature="e#1306#1307#0" expanded="true" />
+            <element signature="e#1365#1366#0" expanded="true" />
+            <element signature="e#1412#1413#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/fiipractic/mycinema/services/impl/ReservationServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1054#1055#0" expanded="true" />
+            <element signature="e#1166#1167#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ro/fiipractic/mycinema/services/ReservationServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="36" column="1" lean-forward="true" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

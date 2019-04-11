@@ -33,6 +33,6 @@ public class MovieInstanceServiceImpl implements MovieInstanceService {
     @Override
     public void deleteMovieInstance(Long id) {
         movieInstanceRepository.deleteById(id);
-        // probably not completed
+        // should I also delete reservations ?
     }
 }
