@@ -33,14 +33,14 @@ public class ReservationServiceTest {
     }
 
     @Test
-    public void shouldReturnReservationById() throws NotFoundException {
+    public void shouldReturnReservationById() throws ro.fiipractic.mycinema.exceptions.NotFoundException {
         Mockito.when(reservationRepository.findById(1L)).thenReturn(java.util.Optional.ofNullable(reservation));
         Reservation reservationById = reservationService.getReservationById(1L);
         Assertions.assertThat(reservationById).isNotNull();
     }
 
     @Test(expected = NotFoundException.class)
-    public void shouldThrowNotFoundExceptionWhenReservationById() throws NotFoundException {
+    public void shouldThrowNotFoundExceptionWhenReservationById() throws ro.fiipractic.mycinema.exceptions.NotFoundException {
         Mockito.when(reservationRepository.findById(0L)).thenReturn(Optional.empty());
         Reservation reservationById = reservationService.getReservationById(0L);
     }

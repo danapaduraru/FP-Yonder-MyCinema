@@ -1,6 +1,5 @@
 package ro.fiipractic.mycinema.services;
 
-import javassist.NotFoundException;
 import org.assertj.core.api.Assertions;
 import org.junit.After;
 import org.junit.Before;
@@ -10,6 +9,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import ro.fiipractic.mycinema.entities.Person;
+import ro.fiipractic.mycinema.exceptions.NotFoundException;
 import ro.fiipractic.mycinema.repositories.PersonRepository;
 import ro.fiipractic.mycinema.services.impl.PersonServiceImpl;
 
@@ -42,7 +42,7 @@ public class PersonServiceTest {
         Assertions.assertThat(personById).isNotNull();
     }
 
-    @Test(expected = NotFoundException.class) // so that app does not crash when test crashes
+    @Test(expected = ro.fiipractic.mycinema.exceptions.NotFoundException.class) // so that app does not crash when test crashes
     public void shouldThrowNotFoundExceptionWhenPersonById() throws NotFoundException {
         Mockito.when(personRepository.findById(0L)).thenReturn(Optional.empty());
         Person personById = personService.getPersonById(0L);
