@@ -1,6 +1,7 @@
 package ro.fiipractic.mycinema.controllers;
 
-import javassist.NotFoundException;
+import ro.fiipractic.mycinema.exceptions.NotFoundException;
+import ro.fiipractic.mycinema.exceptions.BadRequestException;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -61,15 +62,13 @@ public class PersonController {
     }
 
     @PutMapping(value = "/{id}")
-    public Person updatePerson(@PathVariable("id") Long id, @RequestBody PersonDto personDto) throws NotFoundException {
-        logger.info("PersonController updatePerson method called for id " + id + " and person " + personDto.toString());
-        //should be thrown a custom BadRequestException if id and personToUpdate.getId() are not equal
-        Person person = personService.getPersonById(id);
-        if (person == null) {
-            throw new NotFoundException(String.format("Person with id %s was not found.", id));
+    public Person updatePerson(@PathVariable("id") Long id, @RequestBody Person personToUpdate) throws NotFoundException, BadRequestException {
+        logger.info("PersonController updatePerson method called for person " + personToUpdate.toString());
+        if(!id.equals(personToUpdate.getId())){
+            throw new BadRequestException("Different ids: " + id + " from PathVariable and " + personToUpdate.getId() + " from RequestBody");
         }
-        modelMapper.map(personDto, person);
-        return personService.updatePerson(person);
+        Person personDb = personService.getPersonById(id);
+        return personService.updatePerson(personToUpdate);
     }
 
     @DeleteMapping(value = "/{id}")

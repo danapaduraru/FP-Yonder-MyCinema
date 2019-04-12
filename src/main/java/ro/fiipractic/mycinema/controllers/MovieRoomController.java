@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import ro.fiipractic.mycinema.dtos.MovieRoomDto;
 import ro.fiipractic.mycinema.entities.Movie;
 import ro.fiipractic.mycinema.entities.MovieRoom;
+import ro.fiipractic.mycinema.exceptions.NotFoundException;
 import ro.fiipractic.mycinema.services.MovieRoomService;
 
 import java.net.URI;
@@ -53,7 +54,7 @@ public class MovieRoomController {
     }
 
     @GetMapping("/{id}")
-    public MovieRoomDto getMovieRoomById(@PathVariable Long id) {
+    public MovieRoomDto getMovieRoomById(@PathVariable Long id) throws NotFoundException {
         logger.info("MovieRoomController getMovieRoomById method called with id " + id);
         MovieRoom entity = movieRoomService.getMovieRoomById(id);
 

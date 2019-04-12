@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ro.fiipractic.mycinema.entities.Movie;
 import ro.fiipractic.mycinema.entities.MovieInstance;
+import ro.fiipractic.mycinema.exceptions.NotFoundException;
 import ro.fiipractic.mycinema.repositories.MovieInstanceRepository;
 import ro.fiipractic.mycinema.services.MovieInstanceService;
 
@@ -25,9 +26,9 @@ public class MovieInstanceServiceImpl implements MovieInstanceService {
     }
 
     @Override
-    public MovieInstance getMovieInstanceById(Long id) {
+    public MovieInstance getMovieInstanceById(Long id) throws NotFoundException {
         logger.info("MovieInstanceService getMovieInstanceById method called for id " + id);
-        return movieInstanceRepository.findById(id).orElse(null);
+        return movieInstanceRepository.findById(id).orElseThrow(() -> new NotFoundException(String.format("MovieInstance with id=%s was not found.", id)));
     }
 
     @Override

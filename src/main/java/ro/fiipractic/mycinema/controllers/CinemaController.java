@@ -1,6 +1,6 @@
 package ro.fiipractic.mycinema.controllers;
 
-import javassist.NotFoundException;
+import ro.fiipractic.mycinema.exceptions.NotFoundException;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

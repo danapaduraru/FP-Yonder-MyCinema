@@ -1,8 +1,8 @@
 package ro.fiipractic.mycinema.services;
 
-import javassist.NotFoundException;
 import org.springframework.stereotype.Service;
 import ro.fiipractic.mycinema.entities.Cinema;
+import ro.fiipractic.mycinema.exceptions.NotFoundException;
 
 import java.util.List;
 

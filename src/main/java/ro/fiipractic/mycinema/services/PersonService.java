@@ -1,7 +1,7 @@
 package ro.fiipractic.mycinema.services;
 
-import javassist.NotFoundException;
 import ro.fiipractic.mycinema.entities.Person;
+import ro.fiipractic.mycinema.exceptions.NotFoundException;
 
 import java.util.List;
 

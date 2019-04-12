@@ -59,9 +59,9 @@ public class MovieInstanceControllerTest {
         movieInstanceDto = new MovieInstanceDto();
         movieInstanceDto.setId(1L);
         movieInstanceDto.setAvailableSeats(35);
-        movieInstanceDto.setCinema_id(cinema.getId());
-        movieInstanceDto.setMovie_room_id(movieRoom.getId());
-        movieInstanceDto.setMovie_id(movie.getId());
+        movieInstanceDto.setCinema_id(1L);
+        movieInstanceDto.setMovie_room_id(1L);
+        movieInstanceDto.setMovie_id(1L);
         movieInstanceDto.setStartDate("4/11/2019 6PM");
         movieInstanceDto.setEndDate("4/11/2019 8PM");
     }

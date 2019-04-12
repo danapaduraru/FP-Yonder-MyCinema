@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ro.fiipractic.mycinema.entities.Cinema;
 import ro.fiipractic.mycinema.entities.MovieRoom;
+import ro.fiipractic.mycinema.exceptions.NotFoundException;
 import ro.fiipractic.mycinema.repositories.CinemaRepository;
 import ro.fiipractic.mycinema.repositories.MovieRoomRepository;
 import ro.fiipractic.mycinema.services.MovieRoomService;
@@ -31,9 +32,9 @@ public class MovieRoomServiceImpl implements MovieRoomService {
     }
 
     @Override
-    public MovieRoom getMovieRoomById(Long id) {
+    public MovieRoom getMovieRoomById(Long id) throws NotFoundException {
         logger.info("MovieRoomService getMovieRoomById method called for id " + id);
-        return movieRoomRepository.findById(id).orElse(null);
+        return movieRoomRepository.findById(id).orElseThrow(() -> new NotFoundException(String.format("MovieRoom with id=%s was not found.", id)));
     }
 
     @Override

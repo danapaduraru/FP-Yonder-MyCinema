@@ -9,6 +9,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import ro.fiipractic.mycinema.entities.MovieInstance;
+import ro.fiipractic.mycinema.exceptions.NotFoundException;
 import ro.fiipractic.mycinema.repositories.MovieInstanceRepository;
 import ro.fiipractic.mycinema.services.impl.MovieInstanceServiceImpl;
 
@@ -30,7 +31,7 @@ public class MovieInstanceServiceTest {
     }
 
     @Test
-    public void shouldReturnMovieInstanceById() {
+    public void shouldReturnMovieInstanceById() throws NotFoundException {
         // arrange
         Mockito.when(movieInstanceRepository.findById(5L)).thenReturn(java.util.Optional.ofNullable(movieInstance));
         // act
@@ -39,14 +40,12 @@ public class MovieInstanceServiceTest {
         Assertions.assertThat(movieInstanceById).isNotNull();
     }
 
-    @Test
-    public void shouldReturnNullMovieInstanceObjectWhenMovieInstaceById() {
+    @Test(expected = ro.fiipractic.mycinema.exceptions.NotFoundException.class)
+    public void shouldThrowNotFoundExceptionWhenMovieInstanceById() throws NotFoundException {
         // arrange
         Mockito.when(movieInstanceRepository.findById(0L)).thenReturn(java.util.Optional.empty());
         // act
         MovieInstance movieInstanceById = movieInstanceService.getMovieInstanceById(0L);
-        // assert
-        Assertions.assertThat(movieInstanceById).isNull();
     }
 
     @After

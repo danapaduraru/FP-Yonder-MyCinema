@@ -1,11 +1,11 @@
 package ro.fiipractic.mycinema.services.impl;
 
-import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ro.fiipractic.mycinema.entities.Person;
 import ro.fiipractic.mycinema.repositories.PersonRepository;
 import ro.fiipractic.mycinema.services.PersonService;
+import ro.fiipractic.mycinema.exceptions.NotFoundException;
 
 import java.util.List;
 import java.util.logging.Logger;
