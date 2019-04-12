@@ -11,6 +11,7 @@ import ro.fiipractic.mycinema.services.MovieRoomService;
 import javax.persistence.EntityNotFoundException;
 import java.util.List;
 import java.util.Optional;
+import java.util.logging.Logger;
 
 @Service
 public class MovieRoomServiceImpl implements MovieRoomService {
@@ -21,29 +22,35 @@ public class MovieRoomServiceImpl implements MovieRoomService {
     @Autowired
     private CinemaRepository cinemaRepository;
 
+    private static final Logger logger = Logger.getLogger(MovieRoomServiceImpl.class.getName());
+
     @Override
     public List<MovieRoom> getAllMovieRooms() {
+        logger.info("MovieRoomService getAllMovieRooms method called");
         return movieRoomRepository.findAll();
     }
 
     @Override
     public MovieRoom getMovieRoomById(Long id) {
+        logger.info("MovieRoomService getMovieRoomById method called for id " + id);
         return movieRoomRepository.findById(id).orElse(null);
     }
 
     @Override
     public MovieRoom saveMovieRoom(MovieRoom movieRoom) {
+        logger.info("MovieRoomService saveMovieRoom method called");
         return movieRoomRepository.save(movieRoom);
     }
 
     @Override
     public List<MovieRoom> getAllMovieRoomsByCinemaId(Long cinemaId) {
+        logger.info("MovieRoomService getAllMovieRoomsByCinemaId method called for id " + cinemaId);
         return movieRoomRepository.getMovieRoomsByCinema_Id(cinemaId);
     }
 
     @Override
     public void deleteMovieRoom(Long id) {
-        //movieRoomRepository.deleteById(id);
+        logger.info("MovieRoomService deleteMovieRoom method called for id " + id);
         MovieRoom movieRoom = Optional.ofNullable(movieRoomRepository.getOne(id))
                 .orElseThrow(() -> new EntityNotFoundException("Movie room with id " + id + " was not found"));
 
@@ -51,7 +58,6 @@ public class MovieRoomServiceImpl implements MovieRoomService {
                 .orElseThrow(() -> new EntityNotFoundException("Cinema with id " + id + " was not found"));
 
         cinema.removeMovieRoom(id);
-
         cinemaRepository.save(cinema);
     }
 }

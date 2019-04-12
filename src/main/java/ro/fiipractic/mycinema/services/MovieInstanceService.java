@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface MovieInstanceService {
 
-    List<MovieInstance> getAllMovieInstaces();
+    List<MovieInstance> getAllMovieInstances();
     MovieInstance getMovieInstanceById(Long id);
     MovieInstance saveMovieInstance(MovieInstance movieInstance);
     void deleteMovieInstance(Long id);

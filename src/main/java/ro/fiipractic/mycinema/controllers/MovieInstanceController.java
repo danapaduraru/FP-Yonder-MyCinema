@@ -28,7 +28,7 @@ public class MovieInstanceController {
     public List<MovieInstanceDto> getAllMovieInstances(){
         List<MovieInstanceDto> list = new ArrayList<>();
 
-        for (MovieInstance entity : movieInstanceService.getAllMovieInstaces()) {
+        for (MovieInstance entity : movieInstanceService.getAllMovieInstances()) {
             MovieInstanceDto map = modelMapper.map(entity, MovieInstanceDto.class);
             list.add(map);
         }
