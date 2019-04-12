@@ -43,7 +43,7 @@ public class CinemaServiceImpl implements CinemaService {
 
     @Override
     public void deleteCinemaById(Long id) {
-        logger.info("CinemaService deleteCinemaById method called");
+        logger.info("CinemaService deleteCinemaById method called with id " + id);
         cinemaRepository.deleteById(id);
     }
 }
