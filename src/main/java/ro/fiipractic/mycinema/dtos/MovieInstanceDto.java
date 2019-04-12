@@ -71,4 +71,17 @@ public class MovieInstanceDto {
     public void setMovie_room_id(Long movie_room_id) {
         this.movie_room_id = movie_room_id;
     }
+
+    @Override
+    public String toString() {
+        return "MovieInstanceDto{" +
+                "id=" + id +
+                ", startDate='" + startDate + '\'' +
+                ", endDate='" + endDate + '\'' +
+                ", availableSeats=" + availableSeats +
+                ", cinema_id=" + cinema_id +
+                ", movie_id=" + movie_id +
+                ", movie_room_id=" + movie_room_id +
+                '}';
+    }
 }

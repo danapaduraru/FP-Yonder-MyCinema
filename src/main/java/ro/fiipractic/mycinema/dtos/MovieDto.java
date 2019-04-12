@@ -41,4 +41,14 @@ public class MovieDto {
     public void setDurationMinutes(Integer durationMinutes) {
         this.durationMinutes = durationMinutes;
     }
+
+    @Override
+    public String toString() {
+        return "MovieDto{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", durationMinutes=" + durationMinutes +
+                '}';
+    }
 }

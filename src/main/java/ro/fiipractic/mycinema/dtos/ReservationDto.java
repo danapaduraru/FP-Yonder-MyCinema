@@ -41,4 +41,14 @@ public class ReservationDto {
     public void setMovie_instance_id(Long movie_instance_id) {
         this.movie_instance_id = movie_instance_id;
     }
+
+    @Override
+    public String toString() {
+        return "ReservationDto{" +
+                "id=" + id +
+                ", numberOfTickets=" + numberOfTickets +
+                ", customer_id=" + customer_id +
+                ", movie_instance_id=" + movie_instance_id +
+                '}';
+    }
 }

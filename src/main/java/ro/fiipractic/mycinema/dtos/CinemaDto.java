@@ -31,4 +31,13 @@ public class CinemaDto {
     public void setName(String name) {
         this.name = name;
     }
+
+    @Override
+    public String toString() {
+        return "CinemaDto{" +
+                "id=" + id +
+                ", address='" + address + '\'' +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }

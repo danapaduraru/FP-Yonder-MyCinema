@@ -41,4 +41,14 @@ public class MovieRoomDto {
     public void setCinema_id(Long cinema_id) {
         this.cinema_id = cinema_id;
     }
+
+    @Override
+    public String toString() {
+        return "MovieRoomDto{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", capacity=" + capacity +
+                ", cinema_id=" + cinema_id +
+                '}';
+    }
 }
