@@ -44,7 +44,8 @@ public class CinemaServiceTest {
         Assertions.assertThat(cinemaById).isNotNull();
     }
 
-    @Test(expected = ro.fiipractic.mycinema.exceptions.NotFoundException.class) // so that app does not crash when test crashes
+    @Test(expected = ro.fiipractic.mycinema.exceptions.NotFoundException.class)
+    // so that app does not crash when test crashes
     public void shouldThrowNotFoundExceptionWhenCinemaById() throws ro.fiipractic.mycinema.exceptions.NotFoundException {
         // arrange
         Mockito.when(cinemaRepository.findById(2L)).thenReturn(java.util.Optional.empty());

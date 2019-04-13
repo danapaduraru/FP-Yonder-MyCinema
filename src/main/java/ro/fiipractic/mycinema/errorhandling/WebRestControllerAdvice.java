@@ -37,6 +37,6 @@ public class WebRestControllerAdvice {
     }
 
     private ExceptionDto generateErrorDto(HttpStatus status, Exception ex) {
-        return new ExceptionDto(status.value(),ex.getMessage());
+        return new ExceptionDto(status.value(), ex.getMessage());
     }
 }

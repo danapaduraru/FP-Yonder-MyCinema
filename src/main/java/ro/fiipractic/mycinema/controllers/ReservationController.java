@@ -32,7 +32,7 @@ public class ReservationController {
         logger.info("ReservationController getAllReservations method called");
         List<ReservationDto> reservationDtos = new ArrayList<>();
 
-        for(Reservation entity : reservationService.getAllReservations()) {
+        for (Reservation entity : reservationService.getAllReservations()) {
             ReservationDto map = modelMapper.map(entity, ReservationDto.class);
             reservationDtos.add(map);
         }

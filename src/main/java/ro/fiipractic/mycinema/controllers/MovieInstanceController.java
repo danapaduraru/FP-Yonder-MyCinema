@@ -29,7 +29,7 @@ public class MovieInstanceController {
     private static final Logger logger = Logger.getLogger(MovieInstanceController.class.getName());
 
     @GetMapping
-    public List<MovieInstanceDto> getAllMovieInstances(){
+    public List<MovieInstanceDto> getAllMovieInstances() {
         logger.info("MovieInstanceController getAllMovieInstances method called");
         List<MovieInstanceDto> list = new ArrayList<>();
 
@@ -44,14 +44,13 @@ public class MovieInstanceController {
     public MovieInstanceDto getMovieInstanceById(@PathVariable Long id) throws NotFoundException {
         logger.info("MovieInstanceController getMovieInstanceById method called with id " + id);
         MovieInstance entity = movieInstanceService.getMovieInstanceById(id);
-
         return modelMapper.map(entity, MovieInstanceDto.class);
     }
 
     @PostMapping
     public ResponseEntity<MovieInstance> saveMovieInstance(@RequestBody MovieInstanceDto movieInstanceDto) throws URISyntaxException {
         logger.info("MovieInstanceController saveMovieInstance method called for movieInstance " + movieInstanceDto.toString());
-        MovieInstance movieInstance = movieInstanceService.saveMovieInstance(modelMapper.map(movieInstanceDto,MovieInstance.class));
+        MovieInstance movieInstance = movieInstanceService.saveMovieInstance(modelMapper.map(movieInstanceDto, MovieInstance.class));
         return ResponseEntity.created(new URI("/api/movie-instances/" + movieInstance.getId())).body(movieInstance);
     }
 

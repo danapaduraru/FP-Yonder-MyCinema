@@ -64,7 +64,7 @@ public class PersonController {
     @PutMapping(value = "/{id}")
     public Person updatePerson(@PathVariable("id") Long id, @RequestBody Person personToUpdate) throws NotFoundException, BadRequestException {
         logger.info("PersonController updatePerson method called for person " + personToUpdate.toString());
-        if(!id.equals(personToUpdate.getId())){
+        if (!id.equals(personToUpdate.getId())) {
             throw new BadRequestException("Different ids: " + id + " from PathVariable and " + personToUpdate.getId() + " from RequestBody");
         }
         Person personDb = personService.getPersonById(id);

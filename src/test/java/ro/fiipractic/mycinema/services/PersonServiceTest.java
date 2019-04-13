@@ -42,7 +42,8 @@ public class PersonServiceTest {
         Assertions.assertThat(personById).isNotNull();
     }
 
-    @Test(expected = ro.fiipractic.mycinema.exceptions.NotFoundException.class) // so that app does not crash when test crashes
+    @Test(expected = ro.fiipractic.mycinema.exceptions.NotFoundException.class)
+    // so that app does not crash when test crashes
     public void shouldThrowNotFoundExceptionWhenPersonById() throws NotFoundException {
         Mockito.when(personRepository.findById(0L)).thenReturn(Optional.empty());
         Person personById = personService.getPersonById(0L);

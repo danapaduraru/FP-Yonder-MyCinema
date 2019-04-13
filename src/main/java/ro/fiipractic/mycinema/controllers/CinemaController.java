@@ -32,7 +32,7 @@ public class CinemaController {
         logger.info("CinemaController method getAllCinemas called");
         List<CinemaDto> cinemaDtos = new ArrayList<>();
 
-        for(Cinema entity : cinemaService.getAllCinemas()) {
+        for (Cinema entity : cinemaService.getAllCinemas()) {
             CinemaDto map = modelMapper.map(entity, CinemaDto.class);
             cinemaDtos.add(map);
         }
@@ -44,7 +44,7 @@ public class CinemaController {
         logger.info("CinemaController method getCinemasByMovieRoomId called with capacity " + capacity);
         List<CinemaDto> cinemaDtos = new ArrayList<>();
 
-        for(Cinema entity : cinemaService.getCinemasByMovieRoomsCapacity(capacity)) {
+        for (Cinema entity : cinemaService.getCinemasByMovieRoomsCapacity(capacity)) {
             CinemaDto map = modelMapper.map(entity, CinemaDto.class);
             cinemaDtos.add(map);
         }
@@ -66,9 +66,8 @@ public class CinemaController {
         return ResponseEntity.created(new URI("/api/cinemas/" + cinema.getId())).body(cinema);
     }
 
-    @DeleteMapping(value="/{id}")
-    public void deleteById(@PathVariable Long id)
-    {
+    @DeleteMapping(value = "/{id}")
+    public void deleteById(@PathVariable Long id) {
         logger.info("CinemaController method deleteById called with id " + id);
         cinemaService.deleteCinemaById(id);
     }

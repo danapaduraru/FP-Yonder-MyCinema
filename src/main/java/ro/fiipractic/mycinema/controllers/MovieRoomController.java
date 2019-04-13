@@ -1,6 +1,5 @@
 package ro.fiipractic.mycinema.controllers;
 
-
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -57,8 +56,7 @@ public class MovieRoomController {
     public MovieRoomDto getMovieRoomById(@PathVariable Long id) throws NotFoundException {
         logger.info("MovieRoomController getMovieRoomById method called with id " + id);
         MovieRoom entity = movieRoomService.getMovieRoomById(id);
-
-        return modelMapper.map(entity,MovieRoomDto.class);
+        return modelMapper.map(entity, MovieRoomDto.class);
     }
 
     @PostMapping
@@ -68,9 +66,8 @@ public class MovieRoomController {
         return ResponseEntity.created(new URI("/api/movie-rooms/" + movieRoom.getId())).body(movieRoom);
     }
 
-    @DeleteMapping(value="/{id}")
-    public void deleteMovieRoom(@PathVariable Long id)
-    {
+    @DeleteMapping(value = "/{id}")
+    public void deleteMovieRoom(@PathVariable Long id) {
         logger.info("MovieRoomController deleteMovieRoom method called with id " + id);
         movieRoomService.deleteMovieRoom(id);
     }

@@ -17,7 +17,7 @@ public class Cinema {
 
     private String name;
 
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "cinema")
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "cinema")
     @JsonManagedReference
     private List<MovieRoom> movieRooms;
 
