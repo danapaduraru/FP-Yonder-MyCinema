@@ -1,26 +1,26 @@
 package ro.fiipractic.mycinema.services.impl;
 
+import org.apache.velocity.Template;
+import org.apache.velocity.VelocityContext;
+import org.apache.velocity.app.Velocity;
 import org.apache.velocity.app.VelocityEngine;
-import org.springframework.ui.velocity.VelocityEngineUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
-import org.springframework.mail.javamail.MimeMailMessage;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import ro.fiipractic.mycinema.entities.MovieInstance;
-import ro.fiipractic.mycinema.entities.Person;
 import ro.fiipractic.mycinema.entities.Reservation;
 import ro.fiipractic.mycinema.services.MovieInstanceService;
 import ro.fiipractic.mycinema.services.ReservationReminderService;
 
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
+import java.io.StringWriter;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Properties;
 import java.util.logging.Logger;
 
 @Service
@@ -32,7 +32,7 @@ public class ReservationReminderServiceImpl implements ReservationReminderServic
     @Autowired
     private JavaMailSender javaMailSender;
 
-    private VelocityEngine velocityEngine;
+    private VelocityEngine velocityEngine = new VelocityEngine();
 
     private static final Logger logger = Logger.getLogger(ReservationReminderServiceImpl.class.getName());
 
@@ -42,21 +42,35 @@ public class ReservationReminderServiceImpl implements ReservationReminderServic
 
         String to = reservation.getPerson().getEmail();
         String subject = "Reservation today - " + reservation.getMovieInstance().getMovie().getTitle();
-        String text = " yay ";
+
+        Properties properties = new Properties();
+        properties.put("file.resource.loader.path", "src/main/resources/");
+        velocityEngine.init(properties);
 
         MimeMessage reservationReminder = javaMailSender.createMimeMessage();
-
         MimeMessageHelper reservationReminderHelper = new MimeMessageHelper(reservationReminder);
+        VelocityContext velocityContext = new VelocityContext();
+        Template template = velocityEngine.getTemplate("templates/reservation-email-template.vm");
+
+        velocityContext.put("personFullName", reservation.getPerson().getFullName());
+        velocityContext.put("cinemaTitle", reservation.getMovieInstance().getCinema().getName());
+        velocityContext.put("movieTitle", reservation.getMovieInstance().getMovie().getTitle());
+        velocityContext.put("startTime", reservation.getMovieInstance().getStartDate().substring(11));
+        velocityContext.put("tickets", reservation.getNumberOfTickets());
+
+        StringWriter stringWriter = new StringWriter();
+        template.merge(velocityContext, stringWriter);
+
         reservationReminderHelper.setTo(to);
-        reservationReminderHelper.setSubject(subject);
-        reservationReminderHelper.setText(text);
+        reservationReminder.setSubject(subject);
+        reservationReminder.setText(stringWriter.toString());
 
         javaMailSender.send(reservationReminder);
         logger.info("ReservationReminderService sendReservationReminderMail method called: sent mail to " + reservation.getPerson().getEmail() + " with subject " + subject);
     }
 
     @Override
-    @Scheduled(cron = "0 0/9 21 * * *") // send daily at 7AM
+    @Scheduled(cron = "0 0 7 * * *") // send daily at 7AM
     public void sendReservationsMails() throws MessagingException {
         logger.info("ReservationReminderService sendReservationMails method called: sent all reservation mails for today");
 

@@ -1,0 +1,13 @@
+Dear ${personFullName},
+
+This email is for reminding you about your reservation for today at ${cinemaTitle}.
+
+Reservation Details
+
+Movie: ${movieTitle}
+Starting time: ${startTime}
+Number of tickets: ${tickets}
+
+Please be present at the cinema 30 minutes before the movie starts in order to validate your reservation.
+
+MyCinema Fii Practic

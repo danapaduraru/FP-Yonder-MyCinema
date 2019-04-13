@@ -1,0 +1,8 @@
+2019-04-13 21:59:00,543 - ResourceManager : unable to find resource './templates/reservation-email-template.vm' in any resource loader.
+2019-04-13 22:01:00,164 - ResourceManager : unable to find resource 'resources/templates/reservation-email-template.vm' in any resource loader.
+2019-04-13 22:02:00,164 - ResourceManager : unable to find resource 'main/resources/templates/reservation-email-template.vm' in any resource loader.
+2019-04-13 22:04:00,034 - ResourceManager : unable to find resource 'main/resources/templates/reservation-email-template.vm' in any resource loader.
+2019-04-13 22:05:00,494 - ResourceManager : unable to find resource 'templates/reservation-email-template.vm' in any resource loader.
+2019-04-13 22:07:00,163 - ResourceManager : unable to find resource 'templates/reservation-email-template.vm' in any resource loader.
+2019-04-13 22:07:00,163 - ResourceManager : unable to find resource 'templates/reservation-email-template.vm' in any resource loader.
+2019-04-13 22:13:00,453 - ResourceManager : unable to find resource 'templates/reservation-email-template.vm' in any resource loader.
