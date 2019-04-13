@@ -11,5 +11,5 @@ public interface ReservationReminderService {
 
     void sendReservationReminderMail(Reservation reservation) throws MessagingException;
 
-    void sendReservationsMails() throws MessagingException;
+    void sendReservationMailsForToday() throws MessagingException;
 }

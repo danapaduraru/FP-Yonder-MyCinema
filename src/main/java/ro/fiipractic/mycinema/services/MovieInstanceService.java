@@ -11,6 +11,8 @@ public interface MovieInstanceService {
 
     MovieInstance getMovieInstanceById(Long id) throws NotFoundException;
 
+    List<MovieInstance> getMovieInstanceByStartDate(String startDate);
+
     MovieInstance saveMovieInstance(MovieInstance movieInstance);
 
     void deleteMovieInstance(Long id);
