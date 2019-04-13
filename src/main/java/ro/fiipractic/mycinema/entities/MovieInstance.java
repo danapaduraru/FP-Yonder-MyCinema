@@ -35,7 +35,7 @@ public class MovieInstance {
     @JoinColumn(name = "movie_id")
     private Movie movie;
 
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "movieInstance")
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "movieInstance")
     @JsonManagedReference
     private List<Reservation> reservations;
 
