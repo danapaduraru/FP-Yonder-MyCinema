@@ -1,5 +1,6 @@
 package ro.fiipractic.mycinema.controllers;
 
+import ro.fiipractic.mycinema.exceptions.BadRequestException;
 import ro.fiipractic.mycinema.exceptions.NotFoundException;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,6 +53,16 @@ public class ReservationController {
         logger.info("ReservationController saveReservation method called for reservation " + reservationDto.toString());
         Reservation reservation = reservationService.saveReservation(modelMapper.map(reservationDto, Reservation.class));
         return ResponseEntity.created(new URI("/api/reservations/" + reservation.getId())).body(reservation);
+    }
+
+    @PutMapping(value = "/{id}")
+    public ResponseEntity<Reservation> updateReservation(@PathVariable("id") Long id, @RequestBody ReservationDto reservationToUpdateDto) throws NotFoundException, BadRequestException {
+        logger.info("ReservationController updateReservation method called for reservation with id= " + id + " and reservation " + reservationToUpdateDto.toString());
+        if (!id.equals(reservationToUpdateDto.getId())) {
+            throw new BadRequestException("Different ids: " + id + " from PathVariable and " + reservationToUpdateDto.getId() + " from RequestBody");
+        }
+        Reservation reservation = reservationService.updateReservation(modelMapper.map(reservationToUpdateDto, Reservation.class));
+        return ResponseEntity.ok(reservation);
     }
 
     @DeleteMapping(value = "/{id}")

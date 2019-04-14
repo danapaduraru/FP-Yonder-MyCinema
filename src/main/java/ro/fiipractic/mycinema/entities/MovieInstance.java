@@ -36,7 +36,7 @@ public class MovieInstance {
     private Movie movie;
 
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "movieInstance")
-    @JsonManagedReference
+    @JsonManagedReference(value="movieinstance-reservation")
     private List<Reservation> reservations;
 
     public Long getId() {

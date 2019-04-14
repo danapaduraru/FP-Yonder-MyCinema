@@ -44,7 +44,6 @@ public class PersonController {
     public PersonDto getPerson(@PathVariable Long id) throws NotFoundException {
         logger.info("PersonController getPerson method called with id " + id);
         Person entity = personService.getPersonById(id);
-
         return modelMapper.map(entity, PersonDto.class);
     }
 
@@ -55,20 +54,15 @@ public class PersonController {
         return ResponseEntity.created(new URI("/api/persons/" + person.getId())).body(person);
     }
 
-    @PatchMapping(value = "/updateName")
-    public Person updateFullName(@RequestParam Long id, @RequestParam String name) {
-        logger.info("PersonController updateFullName method called with id " + id + " and name " + name);
-        return personService.updateFullNameById(id, name);
-    }
-
     @PutMapping(value = "/{id}")
-    public Person updatePerson(@PathVariable("id") Long id, @RequestBody Person personToUpdate) throws NotFoundException, BadRequestException {
-        logger.info("PersonController updatePerson method called for person " + personToUpdate.toString());
-        if (!id.equals(personToUpdate.getId())) {
-            throw new BadRequestException("Different ids: " + id + " from PathVariable and " + personToUpdate.getId() + " from RequestBody");
+    public ResponseEntity<Person> updatePerson(@PathVariable("id") Long id, @RequestBody Person personToUpdateDto) throws NotFoundException, BadRequestException {
+        logger.info("PersonController updatePerson method called for person with id= " + id + " and person " + personToUpdateDto.toString());
+
+        if (!id.equals(personToUpdateDto.getId())) {
+            throw new BadRequestException("Different ids: " + id + " from PathVariable and " + personToUpdateDto.getId() + " from RequestBody");
         }
-        Person personDb = personService.getPersonById(id);
-        return personService.updatePerson(personToUpdate);
+        Person person = personService.updatePerson(modelMapper.map(personToUpdateDto,Person.class));
+        return ResponseEntity.ok(person);
     }
 
     @DeleteMapping(value = "/{id}")

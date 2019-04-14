@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ro.fiipractic.mycinema.dtos.MovieDto;
 import ro.fiipractic.mycinema.entities.Movie;
+import ro.fiipractic.mycinema.exceptions.BadRequestException;
 import ro.fiipractic.mycinema.exceptions.NotFoundException;
 import ro.fiipractic.mycinema.services.MovieService;
 
@@ -51,6 +52,17 @@ public class MovieController {
         logger.info("MovieController saveMovie method called for movie " + movieDto.toString());
         Movie movie = movieService.saveMovie(modelMapper.map(movieDto, Movie.class));
         return ResponseEntity.created(new URI("/api/movies/" + movie.getId())).body(movie);
+    }
+
+    @PutMapping(value = "/{id}")
+    public ResponseEntity<Movie> updateMovie(@PathVariable("id") Long id, @RequestBody MovieDto movieToUpdateDto) throws BadRequestException, NotFoundException, URISyntaxException {
+        logger.info("MovieController updateMovie method called for movie with id= " + id + " and movie " + movieToUpdateDto.toString());
+        if (!id.equals(movieToUpdateDto.getId())) {
+            logger.info("BadRequestException exception thrown by MovieController updateMovie method");
+            throw new BadRequestException("Different ids: " + id + " from PathVariable and " + movieToUpdateDto.getId() + " from RequestBody");
+        }
+        Movie movie = movieService.updateMovie(modelMapper.map(movieToUpdateDto, Movie.class));
+        return ResponseEntity.ok(movie);
     }
 
     @DeleteMapping(value = "/{id}")

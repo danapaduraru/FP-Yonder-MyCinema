@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import ro.fiipractic.mycinema.dtos.MovieRoomDto;
 import ro.fiipractic.mycinema.entities.Movie;
 import ro.fiipractic.mycinema.entities.MovieRoom;
+import ro.fiipractic.mycinema.exceptions.BadRequestException;
 import ro.fiipractic.mycinema.exceptions.NotFoundException;
 import ro.fiipractic.mycinema.services.MovieRoomService;
 
@@ -64,6 +65,16 @@ public class MovieRoomController {
         logger.info("MovieRoomController saveMovieRoom method called for movieRoom " + movieRoomDto.toString());
         MovieRoom movieRoom = movieRoomService.saveMovieRoom(modelMapper.map(movieRoomDto, MovieRoom.class));
         return ResponseEntity.created(new URI("/api/movie-rooms/" + movieRoom.getId())).body(movieRoom);
+    }
+
+    @PutMapping(value = "/{id}")
+    public ResponseEntity<MovieRoom> updateMovieRoom(@PathVariable("id") Long id, @RequestBody MovieRoomDto movieRoomToUpdateDto) throws NotFoundException, BadRequestException {
+        logger.info("MovieRoomController updateMovieRoom method called for movieRoom with id= " + id + " and movieRoom " + movieRoomToUpdateDto.toString());
+        if (!id.equals(movieRoomToUpdateDto.getId())) {
+            throw new BadRequestException("Different ids: " + id + " from PathVariable and " + movieRoomToUpdateDto.getId() + " from RequestBody");
+        }
+        MovieRoom movieRoom = movieRoomService.updateMovieRoom(modelMapper.map(movieRoomToUpdateDto,MovieRoom.class));
+        return ResponseEntity.ok(movieRoom);
     }
 
     @DeleteMapping(value = "/{id}")

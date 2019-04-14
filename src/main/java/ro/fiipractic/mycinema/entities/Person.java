@@ -27,7 +27,7 @@ public class Person {
     private String email;
 
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "person")
-    @JsonManagedReference
+    @JsonManagedReference(value="person-reservation")
     private List<Reservation> reservations;
 
     public Person() {

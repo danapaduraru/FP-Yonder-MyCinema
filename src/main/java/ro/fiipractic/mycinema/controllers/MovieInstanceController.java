@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ro.fiipractic.mycinema.dtos.MovieInstanceDto;
 import ro.fiipractic.mycinema.entities.MovieInstance;
+import ro.fiipractic.mycinema.exceptions.BadRequestException;
 import ro.fiipractic.mycinema.exceptions.NotFoundException;
 import ro.fiipractic.mycinema.services.MovieInstanceService;
 import ro.fiipractic.mycinema.services.MovieService;
@@ -52,6 +53,16 @@ public class MovieInstanceController {
         logger.info("MovieInstanceController saveMovieInstance method called for movieInstance " + movieInstanceDto.toString());
         MovieInstance movieInstance = movieInstanceService.saveMovieInstance(modelMapper.map(movieInstanceDto, MovieInstance.class));
         return ResponseEntity.created(new URI("/api/movie-instances/" + movieInstance.getId())).body(movieInstance);
+    }
+
+    @PutMapping(value = "/{id}")
+    public ResponseEntity<MovieInstance> updateMovieInstance(@PathVariable("id") Long id, @RequestBody MovieInstanceDto movieInstanceToUpdateDto) throws NotFoundException, BadRequestException {
+        logger.info("MovieInstanceController updateMovieInstance method called for movieInstance with id= " + id + " and movieInstance " + movieInstanceToUpdateDto.toString());
+        if (!id.equals(movieInstanceToUpdateDto.getId())) {
+            throw new BadRequestException("Different ids: " + id + " from PathVariable and " + movieInstanceToUpdateDto.getId() + " from RequestBody");
+        }
+        MovieInstance movieInstance = movieInstanceService.updateMovieInstance(modelMapper.map(movieInstanceToUpdateDto,MovieInstance.class));
+        return ResponseEntity.ok(movieInstance);
     }
 
     @DeleteMapping(value = "/{id}")

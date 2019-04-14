@@ -16,12 +16,12 @@ public class Reservation {
     private Integer numberOfTickets;
 
     @ManyToOne
-    @JsonBackReference
+    @JsonBackReference(value="person-reservation")
     @JoinColumn(name = "customer_id")
     private Person person;
 
     @ManyToOne
-    @JsonBackReference
+    @JsonBackReference(value="movieinstance-reservation")
     @JoinColumn(name = "movie_instance_id")
     private MovieInstance movieInstance;
 
