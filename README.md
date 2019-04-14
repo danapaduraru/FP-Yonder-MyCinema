@@ -1,5 +1,5 @@
 # FP-Yonder-MyCinema
-A java application for managing multiple cinemas, created during training sessions at Fii Practic.
+A java application for managing multiple cinemas, created during training sessions at Fii Practic and continued individually.
 
 - used PostgreSQL, Maven, Hibernate, Mockito, log4j, Spring Boot Scheduler, Spring Boot Mail, Velocity
 - create a reservation for a movie instance in a certain cinema and during a certain time
