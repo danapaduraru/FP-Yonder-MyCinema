@@ -72,7 +72,7 @@ public class ReservationReminderServiceImpl implements ReservationReminderServic
     }
 
     @Override
-    @Scheduled(cron = "0 0/21 23 * * *") // send daily at 7AM
+    @Scheduled(cron = "0 0 7 * * *") // send daily at 7AM
     public void sendReservationMailsForToday() throws MessagingException {
         Date todayDate = new Date();
         String today = dateFormat.format(todayDate);
