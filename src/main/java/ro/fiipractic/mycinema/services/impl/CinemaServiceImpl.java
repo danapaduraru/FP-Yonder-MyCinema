@@ -42,6 +42,12 @@ public class CinemaServiceImpl implements CinemaService {
     }
 
     @Override
+    public Cinema updateCinema(Cinema updatedCinema) {
+        logger.info("CinemaService updateCinema method called");
+        return cinemaRepository.save(updatedCinema);
+    }
+
+    @Override
     public void deleteCinemaById(Long id) {
         logger.info("CinemaService deleteCinemaById method called with id " + id);
         cinemaRepository.deleteById(id);

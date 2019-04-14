@@ -37,6 +37,12 @@ public class ReservationServiceImpl implements ReservationService {
     }
 
     @Override
+    public Reservation updateReservation(Reservation updatedReservation) {
+        logger.info("ReservationService updateReservation method called");
+        return reservationRepository.save(updatedReservation);
+    }
+
+    @Override
     public void deleteReservation(Long id) {
         logger.info("ReservationService deleteReservation method called for id " + id);
         reservationRepository.deleteById(id);

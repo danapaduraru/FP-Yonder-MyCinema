@@ -7,13 +7,11 @@ import java.util.List;
 
 public interface PersonService {
 
-    Person savePerson(Person personToSave);
-
     Person getPersonById(Long id) throws NotFoundException;
 
     List<Person> getAllPersons();
 
-    Person updateFullNameById(Long id, String name);
+    Person savePerson(Person personToSave);
 
     Person updatePerson(Person updatedPerson);
 

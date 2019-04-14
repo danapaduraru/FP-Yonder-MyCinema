@@ -15,5 +15,7 @@ public interface MovieInstanceService {
 
     MovieInstance saveMovieInstance(MovieInstance movieInstance);
 
+    MovieInstance updateMovieInstance(MovieInstance updatedMovieInstance);
+
     void deleteMovieInstance(Long id);
 }

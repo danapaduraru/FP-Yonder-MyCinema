@@ -10,11 +10,13 @@ public interface CinemaService {
 
     List<Cinema> getAllCinemas();
 
-    Cinema saveCinema(Cinema cinema);
-
     List<Cinema> getCinemasByMovieRoomsCapacity(Integer capacity);
 
     Cinema getCinemaById(Long id) throws NotFoundException;
+
+    Cinema saveCinema(Cinema cinema);
+
+    Cinema updateCinema(Cinema updatedCinema);
 
     void deleteCinemaById(Long id);
 }

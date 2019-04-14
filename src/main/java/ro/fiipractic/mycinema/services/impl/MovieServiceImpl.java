@@ -37,6 +37,12 @@ public class MovieServiceImpl implements MovieService {
     }
 
     @Override
+    public Movie updateMovie(Movie updatedMovie) {
+        logger.info("MovieService updateMovie method called");
+        return movieRepository.save(updatedMovie);
+    }
+
+    @Override
     public void deleteMovie(Long id) {
         logger.info("MovieService deleteMovie method called for id " + id);
         movieRepository.deleteById(id);

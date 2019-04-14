@@ -37,14 +37,6 @@ public class PersonServiceImpl implements PersonService {
     }
 
     @Override
-    public Person updateFullNameById(Long id, String name) {
-        logger.info("PersonService updateFullNameById method called for id " + id + " with name: " + name);
-        Person person = personRepository.getOne(id);
-        person.setFullName(name);
-        return personRepository.save(person);
-    }
-
-    @Override
     public Person updatePerson(Person updatedPerson) {
         logger.info("PersonService updatePerson method called");
         return personRepository.save(updatedPerson);

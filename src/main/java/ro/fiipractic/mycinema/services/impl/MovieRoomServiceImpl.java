@@ -38,15 +38,21 @@ public class MovieRoomServiceImpl implements MovieRoomService {
     }
 
     @Override
+    public List<MovieRoom> getAllMovieRoomsByCinemaId(Long cinemaId) {
+        logger.info("MovieRoomService getAllMovieRoomsByCinemaId method called for id " + cinemaId);
+        return movieRoomRepository.getMovieRoomsByCinema_Id(cinemaId);
+    }
+
+    @Override
     public MovieRoom saveMovieRoom(MovieRoom movieRoom) {
         logger.info("MovieRoomService saveMovieRoom method called");
         return movieRoomRepository.save(movieRoom);
     }
 
     @Override
-    public List<MovieRoom> getAllMovieRoomsByCinemaId(Long cinemaId) {
-        logger.info("MovieRoomService getAllMovieRoomsByCinemaId method called for id " + cinemaId);
-        return movieRoomRepository.getMovieRoomsByCinema_Id(cinemaId);
+    public MovieRoom updateMovieRoom(MovieRoom updatedMovieRoom) {
+        logger.info("MovieRoomService updateMovieRoom method called");
+        return movieRoomRepository.save(updatedMovieRoom);
     }
 
     @Override

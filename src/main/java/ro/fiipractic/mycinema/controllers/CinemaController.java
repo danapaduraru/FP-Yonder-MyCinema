@@ -1,5 +1,6 @@
 package ro.fiipractic.mycinema.controllers;
 
+import ro.fiipractic.mycinema.exceptions.BadRequestException;
 import ro.fiipractic.mycinema.exceptions.NotFoundException;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -57,6 +58,17 @@ public class CinemaController {
         Cinema entity = cinemaService.getCinemaById(id);
 
         return modelMapper.map(entity, CinemaDto.class);
+    }
+
+    @PutMapping(value = "/{id}")
+    public Cinema updateCinema(@PathVariable("id") Long id, @RequestBody Cinema cinemaToUpdate) throws BadRequestException, NotFoundException {
+        logger.info("CinemaController updateCinema method called for cinema with id= " + id + " and cinema " + cinemaToUpdate.toString());
+        if (!id.equals(cinemaToUpdate.getId())) {
+            logger.info("BadRequestException exception thrown by CinemaController updateCinema method");
+            throw new BadRequestException("Different ids: " + id + " from PathVariable and " + cinemaToUpdate.getId() + " from RequestBody");
+        }
+        Cinema cinemaDb = cinemaService.getCinemaById(id);
+        return cinemaService.updateCinema(cinemaToUpdate);
     }
 
     @PostMapping

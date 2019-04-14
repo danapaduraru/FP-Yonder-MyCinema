@@ -11,9 +11,11 @@ public interface MovieRoomService {
 
     MovieRoom getMovieRoomById(Long id) throws NotFoundException;
 
+    List<MovieRoom> getAllMovieRoomsByCinemaId(Long cinemaId);
+
     MovieRoom saveMovieRoom(MovieRoom movieRoom);
 
-    List<MovieRoom> getAllMovieRoomsByCinemaId(Long cinemaId);
+    MovieRoom updateMovieRoom(MovieRoom updatedMovieRoom);
 
     void deleteMovieRoom(Long id);
 }
