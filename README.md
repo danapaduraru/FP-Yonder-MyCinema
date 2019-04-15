@@ -1,6 +1,8 @@
 # FP-Yonder-MyCinema
 A java application for managing multiple cinemas, created during training sessions at Fii Practic and continued individually.
 
+https://lit-scrubland-85998.herokuapp.com/swagger-ui.html#/
+
 - used PostgreSQL, Maven, Hibernate, Mockito, log4j, Spring Boot Scheduler, Spring Boot Mail, Velocity, Heroku for hosting
 - create a reservation for a movie instance in a certain cinema and during a certain time
 - create an account in order to keep track of each user's reservations
